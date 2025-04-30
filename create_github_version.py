@@ -109,86 +109,28 @@ def add_bulleted_list(doc, items, font_size=12):
     doc.add_paragraph('')  # Add some space after list
     return
 
-def add_image_with_caption(doc, image_path, width=None, caption=None, centered=True):
-    """Add an image with an optional caption."""
-    # Check if image exists
-    if not os.path.exists(image_path):
-        print(f"Warning: Image not found: {image_path}")
-        return
-        
-    paragraph = doc.add_paragraph()
-    if centered:
-        paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    
-    run = paragraph.add_run()
-    if width:
-        run.add_picture(image_path, width=width)
-    else:
-        run.add_picture(image_path)
-    
-    if caption:
-        caption_para = doc.add_paragraph()
-        caption_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        caption_run = caption_para.add_run(caption)
-        caption_run.font.italic = True
-        caption_run.font.size = Pt(10)
-    
-    return paragraph
-
 def create_features_with_icons(doc, features_data):
-    """
-    Create a section with features and their icons.
-    
-    Args:
-        doc: Document object
-        features_data: List of tuples (icon_path, title, description)
-    """
-    table = doc.add_table(rows=len(features_data), cols=2)
-    table.style = 'Table Grid'
-    table.alignment = WD_TABLE_ALIGNMENT.CENTER
-    
-    for i, (icon_path, title, description) in enumerate(features_data):
-        # Icon cell
-        icon_cell = table.cell(i, 0)
-        icon_cell.width = Cm(2.5)
+    """Create a section with features and their descriptions in a visually appealing way."""
+    for title, description in features_data:
+        # Feature title
+        feature_para = doc.add_paragraph()
+        feature_para.space_after = Pt(2)
+        feature_run = feature_para.add_run("▶ " + title)
+        feature_run.font.bold = True
+        feature_run.font.size = Pt(13)
+        feature_run.font.color.rgb = RGBColor(52, 152, 219)
         
-        # Check if icon exists
-        if os.path.exists(icon_path):
-            icon_para = icon_cell.paragraphs[0]
-            icon_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            icon_run = icon_para.add_run()
-            icon_run.add_picture(icon_path, width=Inches(0.8))
-        else:
-            print(f"Warning: Icon not found: {icon_path}")
-            icon_cell.text = "Icon"
-        
-        # Content cell
-        content_cell = table.cell(i, 1)
-        
-        # Title
-        title_para = content_cell.paragraphs[0]
-        title_para.space_after = Pt(2)
-        title_run = title_para.add_run(title)
-        title_run.font.bold = True
-        title_run.font.size = Pt(12)
-        title_run.font.color.rgb = RGBColor(52, 152, 219)
-        
-        # Description
-        desc_para = content_cell.add_paragraph()
-        desc_para.space_after = Pt(6)
+        # Feature description
+        desc_para = doc.add_paragraph()
+        desc_para.paragraph_format.left_indent = Pt(20)
+        desc_para.space_after = Pt(10)
         desc_run = desc_para.add_run(description)
-        desc_run.font.size = Pt(10)
-    
-    # Adjust column widths
-    table.columns[0].width = Inches(1)
-    table.columns[1].width = Inches(5)
+        desc_run.font.size = Pt(11)
     
     doc.add_paragraph()
-    
-    return table
 
-def create_visual_document():
-    """Create a comprehensive and visually appealing document for ShopSleek E-commerce platform."""
+def create_document():
+    """Create a comprehensive document for ShopSleek E-commerce platform with GitHub-compatible formatting."""
     doc = Document()
     
     # Set default paragraph spacing
@@ -196,18 +138,7 @@ def create_visual_document():
     style.font.size = Pt(12)
     style.paragraph_format.space_after = Pt(6)
     
-    # Create images directory if it doesn't exist
-    if not os.path.exists('images'):
-        os.makedirs('images')
-    
-    # Title Page with background
-    title_para = doc.add_paragraph()
-    title_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    
-    # Add background image to title page
-    add_image_with_caption(doc, "images/title_background.svg", width=Inches(6))
-    
-    # Add ShopSleek title with blue color
+    # Title Page
     add_heading_with_style(doc, "ShopSleek", font_size=40, font_color=RGBColor(52, 152, 219), align=WD_ALIGN_PARAGRAPH.CENTER)
     add_heading_with_style(doc, "E-commerce Platform", level=2, font_size=30, font_color=RGBColor(52, 152, 219), align=WD_ALIGN_PARAGRAPH.CENTER)
     
@@ -272,10 +203,6 @@ def create_visual_document():
     line_run.font.color.rgb = RGBColor(52, 152, 219)
     line_run.font.size = Pt(14)
     
-    # Add ecommerce image
-    add_image_with_caption(doc, "images/ecommerce.jpg", width=Inches(4), 
-                          caption="Figure 1: ShopSleek E-commerce Platform Overview")
-    
     overview_text = """
 ShopSleek is a comprehensive e-commerce platform developed to provide users with a seamless online shopping experience. The platform is designed to handle various aspects of online retail, from product browsing and search to secure checkout and order management.
 
@@ -283,7 +210,7 @@ The system aims to provide an intuitive interface for customers while offering r
 """
     add_paragraph_with_style(doc, overview_text)
     
-    # Core Functionalities with two-column format
+    # Core Functionalities with improved formatting
     add_heading_with_style(doc, "Core Functionalities:", level=2, font_size=16, font_color=RGBColor(44, 62, 80))
     
     core_functions = [
@@ -301,26 +228,27 @@ The system aims to provide an intuitive interface for customers while offering r
         "Responsive design for all devices"
     ]
     
-    # Create two columns for core functions
-    table = doc.add_table(rows=len(core_functions)//2, cols=2)
-    table.style = 'Light Grid Accent 1'
-    table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    # Create a two-column list for core functions
+    half_point = len(core_functions) // 2
     
-    for i in range(len(core_functions)//2):
-        for j in range(2):
-            idx = i*2 + j
-            if idx < len(core_functions):
-                cell = table.cell(i, j)
-                paragraph = cell.paragraphs[0]
-                paragraph.alignment = WD_ALIGN_PARAGRAPH.LEFT
-                run = paragraph.add_run("✓ " + core_functions[idx])
-                run.font.size = Pt(11)
+    for i in range(half_point):
+        para = doc.add_paragraph()
+        para.space_after = Pt(6)
+        
+        # Left column item
+        left_run = para.add_run("✓ " + core_functions[i].ljust(40))
+        left_run.font.size = Pt(11)
+        
+        # Right column item (if available)
+        if i + half_point < len(core_functions):
+            right_run = para.add_run("✓ " + core_functions[i + half_point])
+            right_run.font.size = Pt(11)
     
     doc.add_paragraph()
     
     add_page_break(doc)
     
-    # 2. Key Features with visual icons
+    # 2. Key Features
     add_heading_with_style(doc, "2. Key Features", font_size=18, font_color=RGBColor(52, 152, 219), align=WD_ALIGN_PARAGRAPH.CENTER)
     
     # Add decorative line
@@ -335,40 +263,33 @@ ShopSleek offers a range of features designed to enhance both the user shopping 
 """
     add_paragraph_with_style(doc, features_text)
     
-    # Add key features with icons
+    # Add key features with clear formatting
     features_data = [
         (
-            "images/ui_icon.png", 
             "Intuitive User Interface", 
             "Clean, responsive design optimized for all devices with thoughtful navigation paths and minimal friction points."
         ),
         (
-            "images/search_icon.png", 
             "Advanced Search & Filtering", 
             "Find products quickly with dynamic filtering capabilities that include category browsing, price range filters, and brand selection."
         ),
         (
-            "images/payment_icon.png", 
             "Secure Payment Processing", 
             "PCI-DSS compliant payment gateway integration supporting multiple payment methods including credit/debit cards and digital wallets."
         ),
         (
-            "images/order_icon.png", 
             "Order Management", 
             "Track orders from placement to delivery with real-time updates and notifications for both users and administrators."
         ),
         (
-            "images/user_icon.png",
             "User Accounts", 
             "Personal profiles with wishlists, order history, saved addresses, and preference settings for a personalized experience."
         ),
         (
-            "images/admin_icon.png", 
             "Admin Dashboard", 
             "Complete control over products, orders, users, and inventory with an intuitive administrative interface."
         ),
         (
-            "images/analytics_icon.png", 
             "Analytics & Reporting", 
             "Comprehensive sales reports, user activity tracking, and inventory level monitoring with visual data representation."
         )
@@ -378,7 +299,7 @@ ShopSleek offers a range of features designed to enhance both the user shopping 
     
     add_page_break(doc)
     
-    # 3. System Architecture with diagram
+    # 3. System Architecture
     add_heading_with_style(doc, "3. System Architecture", font_size=18, font_color=RGBColor(52, 152, 219), align=WD_ALIGN_PARAGRAPH.CENTER)
     
     # Add decorative line
@@ -393,32 +314,45 @@ ShopSleek follows a modern three-tier architecture that separates the applicatio
 """
     add_paragraph_with_style(doc, architecture_text)
     
-    # Add architecture diagram
-    add_image_with_caption(doc, "images/architecture.svg", width=Inches(6), 
-                          caption="Figure 2: ShopSleek Three-Tier Architecture Diagram")
-    
-    # Add Three-Tier Architecture section
+    # Add Three-Tier Architecture textual description
     add_heading_with_style(doc, "Three-Tier Architecture:", level=2, font_size=16, font_color=RGBColor(44, 62, 80))
     
-    three_tier = [
-        "Presentation Layer: The top-most layer that directly interacts with users through the User Interface, Admin Dashboard, and Vendor Panel. This layer is responsible for rendering data in a user-friendly format and collecting user inputs.",
-        
-        "Application Layer: The middle layer that processes business logic, including User Management, Product Management, Order Processing, and Payment Gateway integration. This layer acts as an intermediary between the presentation and data layers, applying business rules and ensuring data integrity.",
-        
-        "Data Layer: The foundation layer that handles data storage and retrieval through MySQL Database and File Storage. This layer is optimized for data persistence, security, and efficient query processing."
-    ]
+    # Create a visually appealing architecture description using paragraphs and formatting
+    presentation_para = doc.add_paragraph()
+    presentation_run = presentation_para.add_run("【 Presentation Layer 】")
+    presentation_run.font.bold = True
+    presentation_run.font.size = Pt(14)
+    presentation_run.font.color.rgb = RGBColor(52, 152, 219)
     
-    for item in three_tier:
-        parts = item.split(": ", 1)
-        paragraph = doc.add_paragraph()
-        paragraph.space_after = Pt(12)
-        run = paragraph.add_run(parts[0] + ": ")
-        run.font.bold = True
-        run.font.size = Pt(13)
-        
-        if len(parts) > 1:
-            run = paragraph.add_run(parts[1])
-            run.font.size = Pt(12)
+    presentation_desc = doc.add_paragraph()
+    presentation_desc.paragraph_format.left_indent = Pt(20)
+    presentation_desc.space_after = Pt(12)
+    presentation_desc_run = presentation_desc.add_run("The top-most layer that directly interacts with users through the User Interface, Admin Dashboard, and Vendor Panel. This layer is responsible for rendering data in a user-friendly format and collecting user inputs.")
+    presentation_desc_run.font.size = Pt(11)
+    
+    application_para = doc.add_paragraph()
+    application_run = application_para.add_run("【 Application Layer 】")
+    application_run.font.bold = True
+    application_run.font.size = Pt(14)
+    application_run.font.color.rgb = RGBColor(46, 204, 113)
+    
+    application_desc = doc.add_paragraph()
+    application_desc.paragraph_format.left_indent = Pt(20)
+    application_desc.space_after = Pt(12)
+    application_desc_run = application_desc.add_run("The middle layer that processes business logic, including User Management, Product Management, Order Processing, and Payment Gateway integration. This layer acts as an intermediary between the presentation and data layers, applying business rules and ensuring data integrity.")
+    application_desc_run.font.size = Pt(11)
+    
+    data_para = doc.add_paragraph()
+    data_run = data_para.add_run("【 Data Layer 】")
+    data_run.font.bold = True
+    data_run.font.size = Pt(14)
+    data_run.font.color.rgb = RGBColor(231, 76, 60)
+    
+    data_desc = doc.add_paragraph()
+    data_desc.paragraph_format.left_indent = Pt(20)
+    data_desc.space_after = Pt(12)
+    data_desc_run = data_desc.add_run("The foundation layer that handles data storage and retrieval through MySQL Database and File Storage. This layer is optimized for data persistence, security, and efficient query processing.")
+    data_desc_run.font.size = Pt(11)
     
     # Add Technology Stack section
     add_heading_with_style(doc, "Technology Stack:", level=2, font_size=16, font_color=RGBColor(44, 62, 80))
@@ -641,31 +575,33 @@ Security is a critical aspect of the ShopSleek e-commerce platform, especially c
     # 5.1 Data Protection
     add_heading_with_style(doc, "5.1 Data Protection", level=2, font_size=14)
     
-    # Security icons and explanations in a table format
-    security_features = [
-        (
-            "images/encryption_icon.png",
-            "Password Encryption", 
-            "All user passwords are encrypted using bcrypt hashing algorithm with salt, ensuring that even in the event of a database breach, passwords remain secure."
-        ),
-        (
-            "images/access_icon.png",
-            "Role-based Access Control", 
-            "The system implements granular access controls that restrict users to only the data and functions necessary for their role, enforcing the principle of least privilege."
-        ),
-        (
-            "images/server_icon.png",
-            "Secure Session Management", 
-            "Secure session handling with automatic timeout after periods of inactivity. Sessions are invalidated upon logout and implement secure cookies with appropriate flags."
-        ),
-        (
-            "images/database_icon.png",
-            "Data Loss Prevention", 
-            "Regular automated backups with encryption and secure off-site storage. Point-in-time recovery capabilities and disaster recovery procedures are tested regularly."
-        )
+    data_protection = [
+        "Password Encryption: All user passwords are encrypted using bcrypt hashing algorithm with salt, ensuring that even in the event of a database breach, passwords remain secure. The system enforces strong password policies including minimum length, complexity requirements, and regular password rotation for admin accounts.",
+        
+        "Sensitive Data Encryption: Personal information and payment details are encrypted using AES-256 encryption in the database. Encryption keys are managed using a secure key management system with regular rotation.",
+        
+        "Role-based Access Control: The system implements granular access controls that restrict users to only the data and functions necessary for their role. This limits the potential damage from compromised accounts and enforces the principle of least privilege.",
+        
+        "Session Management: Secure session handling with automatic timeout after periods of inactivity. Sessions are invalidated upon logout and implement secure cookies with appropriate flags (Secure, HttpOnly, SameSite).",
+        
+        "Regular Security Audits: Scheduled security assessments and penetration testing by third-party security experts to identify and address vulnerabilities. This includes code reviews, dependency scanning, and infrastructure security testing.",
+        
+        "Two-factor Authentication: Optional for regular users and mandatory for administrative accounts, adding an additional layer of security beyond passwords.",
+        
+        "Data Loss Prevention: Regular automated backups with encryption and secure off-site storage. Point-in-time recovery capabilities and disaster recovery procedures are tested regularly."
     ]
     
-    create_features_with_icons(doc, security_features)
+    for item in data_protection:
+        parts = item.split(": ", 1)
+        paragraph = doc.add_paragraph()
+        paragraph.space_after = Pt(12)
+        run = paragraph.add_run("🔒 " + parts[0] + ": ")
+        run.font.bold = True
+        run.font.size = Pt(12)
+        
+        if len(parts) > 1:
+            run = paragraph.add_run(parts[1])
+            run.font.size = Pt(12)
     
     # 5.2 Security Implementation
     add_heading_with_style(doc, "5.2 Security Implementation", level=2, font_size=14)
@@ -692,7 +628,7 @@ Security is a critical aspect of the ShopSleek e-commerce platform, especially c
         parts = item.split(": ", 1)
         paragraph = doc.add_paragraph()
         paragraph.space_after = Pt(12)
-        run = paragraph.add_run(parts[0] + ": ")
+        run = paragraph.add_run("🛡️ " + parts[0] + ": ")
         run.font.bold = True
         run.font.size = Pt(12)
         
@@ -716,34 +652,6 @@ Security is a critical aspect of the ShopSleek e-commerce platform, especially c
 The deployment architecture for ShopSleek is designed to provide high availability, scalability, and security. The platform is hosted on HostingRaja, a reliable hosting provider that offers robust infrastructure and excellent support services.
 """
     add_paragraph_with_style(doc, deployment_intro)
-    
-    # Add deployment infrastructure with icons
-    deployment_features = [
-        (
-            "images/hosting_icon.png",
-            "Hosting Infrastructure", 
-            "ShopSleek is deployed on HostingRaja's cloud infrastructure with 99.9% uptime guarantee and geographically distributed data centers for improved latency and redundancy."
-        ),
-        (
-            "images/server_icon.png",
-            "Server Configuration", 
-            "The server environment uses Node.js application servers with Nginx as a reverse proxy and load balancer, and PM2 for process management."
-        ),
-        (
-            "images/database_icon.png",
-            "Database Setup", 
-            "ShopSleek uses MySQL 8.0 with master-slave replication for read scalability and redundancy, optimized through proper indexing and query planning."
-        ),
-        (
-            "images/backup_icon.png",
-            "Backup and Monitoring", 
-            "Daily automated backups with point-in-time recovery capabilities and offsite storage, along with real-time performance monitoring for all system components."
-        )
-    ]
-    
-    create_features_with_icons(doc, deployment_features)
-    
-    # More detailed deployment sections
     
     # 6.1 Hosting Infrastructure
     add_heading_with_style(doc, "6.1 Hosting Infrastructure", level=2, font_size=14)
@@ -785,8 +693,6 @@ The server architecture follows a microservices approach, with separate services
 Each service is deployed in its own container, allowing for independent scaling and deployment. This architecture improves fault isolation and enables more efficient resource utilization.
 """
     add_paragraph_with_style(doc, server_config)
-    
-    add_page_break(doc)
     
     # 6.3 Database Setup
     add_heading_with_style(doc, "6.3 Database Setup", level=2, font_size=14)
@@ -870,7 +776,7 @@ The ShopSleek platform has been designed with future expansion in mind. Several 
         parts = item.split(" - ", 1)
         paragraph = doc.add_paragraph()
         paragraph.space_after = Pt(12)
-        run = paragraph.add_run(parts[0] + " - ")
+        run = paragraph.add_run("⟹ " + parts[0] + " - ")
         run.font.bold = True
         run.font.size = Pt(12)
         
@@ -879,8 +785,8 @@ The ShopSleek platform has been designed with future expansion in mind. Several 
             run.font.size = Pt(12)
     
     # Save the document
-    doc.save('ShopSleek_Enhanced_Documentation.docx')
-    print("Visual documentation created successfully!")
+    doc.save('ShopSleek_Github_Documentation.docx')
+    print("GitHub-compatible documentation created successfully!")
 
 if __name__ == "__main__":
-    create_visual_document()
+    create_document()
