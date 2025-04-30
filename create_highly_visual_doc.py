@@ -1182,38 +1182,56 @@ The ShopSleek platform has been designed with future expansion in mind. Several 
     
     add_timeline(doc, "Feature Development Roadmap", future_timeline)
     
-    # Future Features Comparison
-    categories = ["Customer Value", "Technical Complexity", "Market Demand", "Revenue Potential", "Competitive Edge"]
-    features = ["Mobile Apps", "AI Recommendations", "Voice Commerce", "AR Shopping"]
+    # Create a better organized future features table
+    future_features_table = doc.add_table(rows=4, cols=3)
+    future_features_table.style = 'Table Grid'
+    future_features_table.alignment = WD_TABLE_ALIGNMENT.CENTER
     
-    ratings = {
-        ("Customer Value", "Mobile Apps"): 5,
-        ("Customer Value", "AI Recommendations"): 4,
-        ("Customer Value", "Voice Commerce"): 3,
-        ("Customer Value", "AR Shopping"): 5,
-        
-        ("Technical Complexity", "Mobile Apps"): 3,
-        ("Technical Complexity", "AI Recommendations"): 5,
-        ("Technical Complexity", "Voice Commerce"): 4,
-        ("Technical Complexity", "AR Shopping"): 5,
-        
-        ("Market Demand", "Mobile Apps"): 5,
-        ("Market Demand", "AI Recommendations"): 4,
-        ("Market Demand", "Voice Commerce"): 3,
-        ("Market Demand", "AR Shopping"): 4,
-        
-        ("Revenue Potential", "Mobile Apps"): 4,
-        ("Revenue Potential", "AI Recommendations"): 5,
-        ("Revenue Potential", "Voice Commerce"): 3,
-        ("Revenue Potential", "AR Shopping"): 4,
-        
-        ("Competitive Edge", "Mobile Apps"): 3,
-        ("Competitive Edge", "AI Recommendations"): 5,
-        ("Competitive Edge", "Voice Commerce"): 4,
-        ("Competitive Edge", "AR Shopping"): 5,
-    }
+    # Set header row
+    header_cells = future_features_table.rows[0].cells
     
-    add_comparison_table(doc, "Future Feature Assessment", categories, features, ratings)
+    headers = ["Timeline", "Feature", "Description"]
+    for i, header in enumerate(headers):
+        header_cells[i].text = header
+        set_cell_background(header_cells[i], "3498DB")  # Blue background
+        
+        # Format header
+        for paragraph in header_cells[i].paragraphs:
+            paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            for run in paragraph.runs:
+                run.font.bold = True
+                run.font.size = Pt(12)
+                run.font.color.rgb = RGBColor(255, 255, 255)  # White text
+
+    # Set column widths
+    future_features_table.columns[0].width = Inches(1.0)   # Timeline
+    future_features_table.columns[1].width = Inches(1.5)   # Feature
+    future_features_table.columns[2].width = Inches(3.5)   # Description
+    
+    # Add feature rows
+    features_data = [
+        ["2025 Q3-Q4", "Mobile Applications", "Native Android and iOS apps with offline capabilities, push notifications, and synchronized user accounts across devices."],
+        ["2026 Q1", "AI Recommendations", "Personalized product suggestions using machine learning algorithms based on browsing history, purchase patterns, and similar user behaviors."],
+        ["2026 Q2-Q3", "Augmented Reality", "Virtual product try-on experiences allowing customers to visualize products in their environment before purchasing."]
+    ]
+    
+    for row_idx, feature in enumerate(features_data, start=1):
+        for col_idx, value in enumerate(feature):
+            cell = future_features_table.cell(row_idx, col_idx)
+            cell.text = value
+            
+            # Add some formatting
+            if col_idx == 0:  # Timeline column
+                set_cell_background(cell, "ECF0F1")  # Light gray background
+                for paragraph in cell.paragraphs:
+                    paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            
+            if col_idx == 1:  # Feature column
+                for paragraph in cell.paragraphs:
+                    for run in paragraph.runs:
+                        run.font.bold = True
+    
+    doc.add_paragraph()  # Add spacing
     
     # Save the document
     doc.save('ShopSleek_Highly_Visual_Documentation.docx')

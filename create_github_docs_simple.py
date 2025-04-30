@@ -426,6 +426,57 @@ The ShopSleek platform has been designed with future expansion in mind. Several 
     
     add_bulleted_list(doc, future_features)
     
+    # Create a better organized future features table instead of feature assessment
+    future_features_table = doc.add_table(rows=4, cols=3)
+    future_features_table.style = 'Table Grid'
+    future_features_table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    
+    # Set header row
+    header_cells = future_features_table.rows[0].cells
+    
+    headers = ["Timeline", "Feature", "Description"]
+    for i, header in enumerate(headers):
+        header_cells[i].text = header
+        set_cell_background(header_cells[i], "3498DB")  # Blue background
+        
+        # Format header
+        for paragraph in header_cells[i].paragraphs:
+            paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            for run in paragraph.runs:
+                run.font.bold = True
+                run.font.size = Pt(12)
+                run.font.color.rgb = RGBColor(255, 255, 255)  # White text
+
+    # Set column widths
+    future_features_table.columns[0].width = Inches(1.0)   # Timeline
+    future_features_table.columns[1].width = Inches(1.5)   # Feature
+    future_features_table.columns[2].width = Inches(3.5)   # Description
+    
+    # Add feature rows
+    features_data = [
+        ["2025 Q3-Q4", "Mobile Applications", "Native Android and iOS apps with offline capabilities, push notifications, and synchronized user accounts across devices."],
+        ["2026 Q1", "AI Recommendations", "Personalized product suggestions using machine learning algorithms based on browsing history, purchase patterns, and similar user behaviors."],
+        ["2026 Q2-Q3", "Augmented Reality", "Virtual product try-on experiences allowing customers to visualize products in their environment before purchasing."]
+    ]
+    
+    for row_idx, feature in enumerate(features_data, start=1):
+        for col_idx, value in enumerate(feature):
+            cell = future_features_table.cell(row_idx, col_idx)
+            cell.text = value
+            
+            # Add some formatting
+            if col_idx == 0:  # Timeline column
+                set_cell_background(cell, "ECF0F1")  # Light gray background
+                for paragraph in cell.paragraphs:
+                    paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            
+            if col_idx == 1:  # Feature column
+                for paragraph in cell.paragraphs:
+                    for run in paragraph.runs:
+                        run.font.bold = True
+    
+    doc.add_paragraph()  # Add spacing
+    
     # Conclusion
     conclusion_text = """
 ShopSleek provides a robust, secure, and user-friendly e-commerce solution suitable for businesses of all sizes. With its comprehensive feature set, modern architecture, and focus on security, ShopSleek addresses the challenges of today's competitive online retail landscape while laying the groundwork for future innovations and enhancements.
