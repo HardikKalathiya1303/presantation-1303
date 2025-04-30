@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSleek E-commerce Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Title Slide -->
+        <section class="slide" id="title-slide">
+            <div class="slide-content">
+                <div class="header">
+                    <h1>ShopSleek</h1>
+                    <h2>E-commerce Platform</h2>
+                </div>
+                <div class="author">
+                    <p>Developed by: Hardik Kalathiya</p>
+                    <p>Under the Guidance of: Dr. Maitri Jhaveri</p>
+                    <p>Department of Computer Science</p>
+                    <p>Gujarat University</p>
+                </div>
+                <div class="background-image">
+                    <img src="https://images.unsplash.com/photo-1483181957632-8bda974cbc91" alt="E-commerce Shopping">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 1</div>
+        </section>
+
+        <!-- Project Overview -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Project Overview</h2>
+                <div class="two-column">
+                    <div class="column">
+                        <ul class="feature-list">
+                            <li>Online shopping platform for various products</li>
+                            <li>User registration and account management</li>
+                            <li>Guest shopping capabilities</li>
+                            <li>Product search and filtering</li>
+                            <li>Shopping cart management</li>
+                            <li>Secure checkout process</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul class="feature-list">
+                            <li>Order tracking</li>
+                            <li>Admin dashboard for system management</li>
+                            <li>Multi-vendor support system</li>
+                            <li>Reporting and analytics</li>
+                            <li>Secure payment processing</li>
+                            <li>Responsive design for all devices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="background-image faded">
+                    <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0" alt="Shopping Online">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 2</div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Key Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Intuitive UI</h3>
+                        <p>Clean, responsive design optimized for all devices</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-search"></i>
+                        <h3>Advanced Search</h3>
+                        <p>Find products quickly with dynamic filtering</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Secure Payments</h3>
+                        <p>PCI-DSS compliant payment gateway integration</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-truck"></i>
+                        <h3>Order Management</h3>
+                        <p>Track orders from placement to delivery</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>User Accounts</h3>
+                        <p>Personal profiles, wishlists, and order history</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analytics & Reporting</h3>
+                        <p>Sales reports, user activity, and inventory levels</p>
+                    </div>
+                </div>
+                <div class="background-image faded">
+                    <img src="https://images.unsplash.com/photo-1516274626895-055a99214f08" alt="E-commerce Features">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 3</div>
+        </section>
+
+        <!-- System Architecture -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>System Architecture</h2>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>Three-Tier Architecture</h3>
+                        <ul>
+                            <li><strong>Presentation Layer:</strong> User Interface, Admin Dashboard, Vendor Panel</li>
+                            <li><strong>Application Layer:</strong> User Management, Product Management, Order Processing, Payment Gateway</li>
+                            <li><strong>Data Layer:</strong> MySQL Database, File Storage</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Technology Stack</h3>
+                        <ul>
+                            <li><strong>Frontend:</strong> React.js, Tailwind CSS</li>
+                            <li><strong>Backend:</strong> Node.js, Express.js</li>
+                            <li><strong>Database:</strong> MySQL</li>
+                            <li><strong>Server:</strong> Node.js</li>
+                            <li><strong>Hosting:</strong> HostingRaja</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="architecture-diagram">
+                    <img src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a" alt="Architecture Diagram">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 4</div>
+        </section>
+
+        <!-- Test Cases - User Authentication -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Test Cases - User Authentication</h2>
+                <div class="test-case-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Test Steps</th>
+                                <th>Test Data</th>
+                                <th>Expected Result</th>
+                                <th>Actual Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC01</td>
+                                <td>
+                                    1. Navigate to registration page<br>
+                                    2. Fill all required fields<br>
+                                    3. Click on Register button
+                                </td>
+                                <td>
+                                    Name: John Doe<br>
+                                    Email: john@example.com<br>
+                                    Password: SecurePass123<br>
+                                    Confirm Password: SecurePass123
+                                </td>
+                                <td>Account created with confirmation email sent</td>
+                                <td>Account created and confirmation email received</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC02</td>
+                                <td>
+                                    1. Navigate to registration page<br>
+                                    2. Leave all fields empty<br>
+                                    3. Click on Register button
+                                </td>
+                                <td>All fields empty</td>
+                                <td>Error message displayed for each required field</td>
+                                <td>Error message displayed: "All fields are required"</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC03</td>
+                                <td>
+                                    1. Navigate to registration page<br>
+                                    2. Enter invalid email format<br>
+                                    3. Click on Register button
+                                </td>
+                                <td>
+                                    Name: Jane Smith<br>
+                                    Email: jane.emailcom<br>
+                                    Password: Pass123
+                                </td>
+                                <td>Validation error shown for email field</td>
+                                <td>Validation error: "Please enter a valid email address"</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="background-image testing-bg">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173" alt="Testing Process">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 5</div>
+        </section>
+
+        <!-- Test Cases - User Authentication (Continued) -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Test Cases - User Authentication (Continued)</h2>
+                <div class="test-case-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Test Steps</th>
+                                <th>Test Data</th>
+                                <th>Expected Result</th>
+                                <th>Actual Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC04</td>
+                                <td>
+                                    1. Navigate to login page<br>
+                                    2. Enter valid credentials<br>
+                                    3. Click on Login button
+                                </td>
+                                <td>
+                                    Email: user@example.com<br>
+                                    Password: Correct123
+                                </td>
+                                <td>User logged in and redirected to dashboard</td>
+                                <td>User successfully logged in and redirected to dashboard</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC05</td>
+                                <td>
+                                    1. Navigate to login page<br>
+                                    2. Enter invalid credentials<br>
+                                    3. Click on Login button
+                                </td>
+                                <td>
+                                    Email: user@example.com<br>
+                                    Password: WrongPass123
+                                </td>
+                                <td>Error message displayed</td>
+                                <td>Error message: "Invalid email or password"</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC06</td>
+                                <td>
+                                    1. Navigate to login page<br>
+                                    2. Leave fields blank<br>
+                                    3. Click on Login button
+                                </td>
+                                <td>
+                                    Email: [blank]<br>
+                                    Password: [blank]
+                                </td>
+                                <td>Form validation errors</td>
+                                <td>Error messages displayed for all required fields</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="background-image testing-bg">
+                    <img src="https://images.unsplash.com/photo-1593491205049-7f032d28cf5c" alt="Testing Process">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 6</div>
+        </section>
+
+        <!-- Test Cases - Product Browsing -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Test Cases - Product Browsing</h2>
+                <div class="test-case-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Test Steps</th>
+                                <th>Test Data</th>
+                                <th>Expected Result</th>
+                                <th>Actual Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC07</td>
+                                <td>
+                                    1. Navigate to search bar<br>
+                                    2. Enter valid search term<br>
+                                    3. Press search button
+                                </td>
+                                <td>Search term: "smartphone"</td>
+                                <td>Relevant smartphone products displayed</td>
+                                <td>5 smartphone products displayed with images and prices</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC08</td>
+                                <td>
+                                    1. Navigate to search bar<br>
+                                    2. Enter search term with no matches<br>
+                                    3. Press search button
+                                </td>
+                                <td>Search term: "nonexistentitem123"</td>
+                                <td>Empty results message shown</td>
+                                <td>Message: "No products match your search criteria"</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC09</td>
+                                <td>
+                                    1. Navigate to category menu<br>
+                                    2. Select a specific category<br>
+                                    3. View filtered results
+                                </td>
+                                <td>Category: "Electronics"</td>
+                                <td>Only electronics products displayed</td>
+                                <td>12 electronics products displayed in result set</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="background-image faded">
+                    <img src="https://images.unsplash.com/photo-1521566652839-697aa473761a" alt="E-commerce Shopping">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 7</div>
+        </section>
+
+        <!-- Test Cases - Product Browsing (Continued) -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Test Cases - Product Browsing (Continued)</h2>
+                <div class="test-case-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Test Steps</th>
+                                <th>Test Data</th>
+                                <th>Expected Result</th>
+                                <th>Actual Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC10</td>
+                                <td>
+                                    1. Navigate to filter section<br>
+                                    2. Apply multiple filters<br>
+                                    3. View results
+                                </td>
+                                <td>
+                                    Category: "Electronics"<br>
+                                    Price Range: $200-$500<br>
+                                    Brand: "Samsung"
+                                </td>
+                                <td>Products matching all filter criteria</td>
+                                <td>3 Samsung electronic products in $200-$500 range displayed</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC11</td>
+                                <td>
+                                    1. Navigate to product page<br>
+                                    2. Select in-stock item<br>
+                                    3. Click Add to Cart
+                                </td>
+                                <td>Product: "Samsung Galaxy S21"</td>
+                                <td>Product added to cart with confirmation</td>
+                                <td>Product added to cart with "Added to Cart" message</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC12</td>
+                                <td>
+                                    1. Navigate to product page<br>
+                                    2. Select out-of-stock item<br>
+                                    3. Attempt to add to cart
+                                </td>
+                                <td>Product: "iPhone 13 Pro Max - 1TB"</td>
+                                <td>Error message displayed</td>
+                                <td>Add to Cart button active and no error shown</td>
+                                <td class="fail">Fail</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="background-image faded">
+                    <img src="https://images.unsplash.com/photo-1516274626895-055a99214f08" alt="E-commerce Shopping">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 8</div>
+        </section>
+
+        <!-- Test Cases - Shopping Cart & Checkout -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Test Cases - Shopping Cart & Checkout</h2>
+                <div class="test-case-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Test Steps</th>
+                                <th>Test Data</th>
+                                <th>Expected Result</th>
+                                <th>Actual Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC13</td>
+                                <td>
+                                    1. Navigate to cart<br>
+                                    2. Change quantity of item<br>
+                                    3. Update cart
+                                </td>
+                                <td>
+                                    Product: "Wireless Earbuds"<br>
+                                    Change quantity from 1 to 3
+                                </td>
+                                <td>Cart updated with new quantity and price</td>
+                                <td>Quantity updated to 3 and price recalculated</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC14</td>
+                                <td>
+                                    1. Navigate to cart<br>
+                                    2. Click remove button on an item<br>
+                                    3. Confirm removal
+                                </td>
+                                <td>Product: "Bluetooth Speaker"</td>
+                                <td>Item removed from cart</td>
+                                <td>Item successfully removed and cart updated</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC15</td>
+                                <td>
+                                    1. Proceed to checkout<br>
+                                    2. Enter valid shipping and payment info<br>
+                                    3. Place order
+                                </td>
+                                <td>
+                                    Address: "123 Main St"<br>
+                                    Card: "4111 1111 1111 1111"<br>
+                                    Exp: "12/25"<br>
+                                    CVV: "123"
+                                </td>
+                                <td>Order placed successfully</td>
+                                <td>Order confirmation page with order number displayed</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="background-image faded">
+                    <img src="https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec" alt="Secure Payments">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 9</div>
+        </section>
+
+        <!-- Test Cases - Shopping Cart & Checkout (Continued) -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Test Cases - Shopping Cart & Checkout (Continued)</h2>
+                <div class="test-case-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Test Steps</th>
+                                <th>Test Data</th>
+                                <th>Expected Result</th>
+                                <th>Actual Result</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC16</td>
+                                <td>
+                                    1. Proceed to checkout<br>
+                                    2. Enter invalid card number<br>
+                                    3. Attempt to place order
+                                </td>
+                                <td>
+                                    Address: "123 Main St"<br>
+                                    Card: "1234 5678 9012 3456"<br>
+                                    Exp: "12/25"<br>
+                                    CVV: "123"
+                                </td>
+                                <td>Error message displayed</td>
+                                <td>Error message: "Invalid card number"</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC17</td>
+                                <td>
+                                    1. Proceed to checkout<br>
+                                    2. Enter invalid CVV<br>
+                                    3. Attempt to place order
+                                </td>
+                                <td>
+                                    Address: "123 Main St"<br>
+                                    Card: "4111 1111 1111 1111"<br>
+                                    Exp: "12/25"<br>
+                                    CVV: "12"
+                                </td>
+                                <td>Error message displayed</td>
+                                <td>Error message: "Invalid CVV format"</td>
+                                <td class="pass">Pass</td>
+                            </tr>
+                            <tr>
+                                <td>TC18</td>
+                                <td>
+                                    1. Navigate to order tracking<br>
+                                    2. Enter order ID<br>
+                                    3. View order status
+                                </td>
+                                <td>Order ID: "ORD-12345678"</td>
+                                <td>Correct order status shown</td>
+                                <td>Order status page not loading</td>
+                                <td class="fail">Fail</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="background-image faded">
+                    <img src="https://images.unsplash.com/photo-1599050751795-6cdaafbc2319" alt="Payment Processing">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 10</div>
+        </section>
+
+        <!-- Test Results Summary -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Test Results Summary</h2>
+                <div class="summary-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Total Tests</th>
+                                <th>Passed</th>
+                                <th>Failed</th>
+                                <th>Success Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>User Authentication</td>
+                                <td>6</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>100%</td>
+                            </tr>
+                            <tr>
+                                <td>Product Browsing</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>83.3%</td>
+                            </tr>
+                            <tr>
+                                <td>Shopping & Checkout</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>1</td>
+                                <td>83.3%</td>
+                            </tr>
+                            <tr>
+                                <td>Admin Functions</td>
+                                <td>8</td>
+                                <td>7</td>
+                                <td>1</td>
+                                <td>87.5%</td>
+                            </tr>
+                            <tr>
+                                <td>API Endpoints</td>
+                                <td>10</td>
+                                <td>9</td>
+                                <td>1</td>
+                                <td>90%</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td>Overall System</td>
+                                <td>36</td>
+                                <td>32</td>
+                                <td>4</td>
+                                <td>88.9%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="charts">
+                    <div class="chart-item">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>88.9% Pass Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 11</div>
+        </section>
+
+        <!-- Security Aspects -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Security Aspects</h2>
+                <div class="two-column">
+                    <div class="column">
+                        <h3>Data Protection</h3>
+                        <ul>
+                            <li>Password encryption using BCrypt with salt rounds</li>
+                            <li>AES-256 encryption for sensitive customer data</li>
+                            <li>Role-based access control mechanisms</li>
+                            <li>Session management with expiration controls</li>
+                            <li>Regular security audits and penetration testing</li>
+                            <li>Data minimization and retention policies</li>
+                            <li>Secure API keys management and rotation</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Security Implementation</h3>
+                        <ul>
+                            <li>SQL Injection: Prepared statements and ORM</li>
+                            <li>XSS Attacks: Content Security Policy (CSP)</li>
+                            <li>CSRF Attacks: Double-submit cookie pattern</li>
+                            <li>Session Hijacking: HTTPOnly and Secure flags</li>
+                            <li>Brute Force: Rate limiting and CAPTCHA</li>
+                            <li>API Security: OAuth 2.0 and JWT authentication</li>
+                            <li>HTTPS with TLS 1.3 and HSTS implementation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="background-image security-bg">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" alt="Cybersecurity">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 12</div>
+        </section>
+
+        <!-- Additional Security Measures -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Additional Security Measures</h2>
+                <div class="security-grid">
+                    <div class="security-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>PCI DSS Compliance</h3>
+                        <p>Complete compliance with Payment Card Industry Data Security Standards</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>GDPR Compliance</h3>
+                        <p>Full implementation of EU General Data Protection Regulation requirements</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-lock"></i>
+                        <h3>Multi-factor Authentication</h3>
+                        <p>Two-factor authentication for admin and high-value user accounts</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-eye-slash"></i>
+                        <h3>Privacy by Design</h3>
+                        <p>Privacy controls built into the development lifecycle</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Security Headers</h3>
+                        <p>Implementation of all OWASP recommended security headers</p>
+                    </div>
+                    <div class="security-item">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>Secure SDLC</h3>
+                        <p>Security integrated throughout the software development lifecycle</p>
+                    </div>
+                </div>
+                <div class="background-image security-bg">
+                    <img src="https://images.unsplash.com/photo-1582571008093-fc9b41800be5" alt="Cybersecurity Protection">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 13</div>
+        </section>
+
+        <!-- Deployment Architecture -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Deployment Architecture</h2>
+                <div class="deployment-list">
+                    <ul>
+                        <li><strong>Hosting:</strong> HostingRaja with 99.9% uptime SLA guarantee</li>
+                        <li><strong>Server Configuration:</strong> Node.js server with Express.js framework optimized for high performance</li>
+                        <li><strong>Database:</strong> MySQL 8.0 with connection pooling and query optimization</li>
+                        <li><strong>SSL Implementation:</strong> Let's Encrypt certificates with auto-renewal for HTTPS</li>
+                        <li><strong>Scalability:</strong> Horizontal scaling with load balancing for high traffic management</li>
+                        <li><strong>Backup System:</strong> Automated daily backups with point-in-time recovery capability</li>
+                        <li><strong>Monitoring:</strong> Real-time performance monitoring with Datadog and New Relic</li>
+                        <li><strong>CDN Integration:</strong> Cloudflare CDN for optimized asset delivery globally</li>
+                    </ul>
+                </div>
+                <div class="architecture-diagram">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625" alt="Deployment Architecture">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 14</div>
+        </section>
+
+        <!-- Enhanced Deployment Architecture -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Enhanced Deployment Architecture</h2>
+                <div class="deployment-grid">
+                    <div class="deployment-item">
+                        <i class="fas fa-server"></i>
+                        <h3>Environment Separation</h3>
+                        <p>Distinct development, staging, and production environments</p>
+                    </div>
+                    <div class="deployment-item">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>CI/CD Pipeline</h3>
+                        <p>Automated testing and deployment with GitHub Actions</p>
+                    </div>
+                    <div class="deployment-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Microservices Architecture</h3>
+                        <p>Decoupled services for authentication, products, and orders</p>
+                    </div>
+                    <div class="deployment-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Performance Optimization</h3>
+                        <p>Image compression, code minification, and lazy loading</p>
+                    </div>
+                    <div class="deployment-item">
+                        <i class="fas fa-database"></i>
+                        <h3>Database Optimization</h3>
+                        <p>Indexing, query caching, and read replicas for scaling</p>
+                    </div>
+                    <div class="deployment-item">
+                        <i class="fas fa-fire-extinguisher"></i>
+                        <h3>Disaster Recovery</h3>
+                        <p>Multi-region backups with automated failover capability</p>
+                    </div>
+                </div>
+                <div class="background-image deployment-bg">
+                    <img src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a" alt="Web Deployment">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 15</div>
+        </section>
+
+        <!-- Future Scope -->
+        <section class="slide">
+            <div class="slide-content">
+                <h2>Future Scope</h2>
+                <div class="future-scope-grid">
+                    <div class="scope-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Applications</h3>
+                        <p>Native Android and iOS apps with synchronized shopping experience</p>
+                    </div>
+                    <div class="scope-item">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI Recommendations</h3>
+                        <p>Machine learning-powered personalized product suggestions</p>
+                    </div>
+                    <div class="scope-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Advanced Analytics</h3>
+                        <p>Customer behavior analysis and sales forecasting</p>
+                    </div>
+                    <div class="scope-item">
+                        <i class="fas fa-microphone"></i>
+                        <h3>Voice Commerce</h3>
+                        <p>Integration with voice assistants for hands-free shopping</p>
+                    </div>
+                    <div class="scope-item">
+                        <i class="fas fa-vr-cardboard"></i>
+                        <h3>Augmented Reality</h3>
+                        <p>Virtual product try-on and room visualization experiences</p>
+                    </div>
+                    <div class="scope-item">
+                        <i class="fas fa-globe"></i>
+                        <h3>Internationalization</h3>
+                        <p>Multi-language and multi-currency support for global markets</p>
+                    </div>
+                    <div class="scope-item">
+                        <i class="fas fa-store"></i>
+                        <h3>Marketplace Expansion</h3>
+                        <p>Platform for multiple vendors with integrated analytics</p>
+                    </div>
+                    <div class="scope-item">
+                        <i class="fas fa-hashtag"></i>
+                        <h3>Social Commerce</h3>
+                        <p>Direct purchasing from social media platforms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 16</div>
+        </section>
+
+        <!-- Thank You Slide -->
+        <section class="slide" id="thank-you">
+            <div class="slide-content">
+                <div class="thank-you-content">
+                    <h2>Thank You!</h2>
+                    <p>Hardik Kalathiya</p>
+                    <p>Department of Computer Science, Gujarat University</p>
+                </div>
+                <div class="background-image">
+                    <img src="https://images.unsplash.com/photo-1551265358-a5f7aa4a226c" alt="Thank You">
+                </div>
+            </div>
+            <div class="footer">ShopSleek - 17</div>
+        </section>
+    </div>
+
+    <div class="navigation">
+        <button id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
