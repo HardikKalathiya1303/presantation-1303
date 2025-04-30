@@ -1,0 +1,2139 @@
+Department of  Computer Science 
+(Gujarat University) 
+ShopSleek 
+BY 
+Hardik Kalathiya 
+UNDER GUIDANCE 
+OF 
+Dr. Maitri Jhaveri 
+SUBMITTED TO 
+Department of computer science, Rollwala center 
+FOR DEGREE OF 
+MASTER OF COMPUTER APPLICATIONS 
+Department of computer science 
+(Gujarat University)    
+NAVARANGPURA, AHMEDABAD - 380009 
+In today’s competitive world information holds key to success in life. The information 
+can be obtained in various ways in these times. Today the most common and easiest 
+way to obtain the information is the Internet. 
+Internet is such a medium through which we can search information on literally any 
+topic known to men. Also, Internet is one of the most far reached mediums that can 
+spread information. It doesn’t consider the geographical barriers in passing of the 
+information. 
+If the right information is provided to the right person on right time, then it holds power 
+to make a revolution. Also, if the correct information is not provided then it may also be 
+possible to survive in this world. 
+With this thought in mind and considering the power of information we developed the 
+project that can pass on the information so that more and more people can get benefited 
+of the information provided. 
+This semester of MCA is designed keeping the prerogative and the preferences of 
+industry in mind. This particular semester allows a student to implement what he\she 
+has learned within four walls of his\her classroom. It is here where the capability of 
+student is tested to find his\her suitability for the rigorous tasks assigned to him in 
+future. A Future executive is born on the basis of hard work and dedication he\she 
+shows during these periods of his\her training. 
+We here, feel very grateful presenting this project report on the project “E-commerce”. 
+We feel very fortunate to have support of number of key individuals during our project 
+work. Here we take a chance to thank them all for helping us all the way through the 
+project work. 
+First of all we would like to begin with our guide, Dr. Maitri Jhaveri for putting his all 
+trust in us and giving us the project by identifying our hidden strength. Also, we would 
+like to thank him for his valuable guidance and tips that were professional and for 
+helping us continuously and making resources available so that we could complete the 
+project in time. We would be extremely indebted for their valuable time and continuous 
+support. 
+We also should not forget our Principal Dr. Hiren Joshi (Academic Head) for their 
+support, without them we might not be able to complete the project. 
+We would like to give a word of thank to all those people whose names may have not 
+been appeared in here but their contribution has not gone unnoticed. We are also very 
+thankful to them. 
+We also express thanks to all the staff members of RCC, for their timely advice and 
+expertise. 
+ 
+ 
+ 
+Title Page No. 
+1. Introduction 02 
+1.1 Background 02 
+1.2 Objective 02 
+1.3 Goal 03 
+1.4 Purpose 03 
+1.5 scope 03 
+1.6 Applicability 04 
+2. System Requirement and Analysis 06 
+2.1 System Requirement 06 
+2.1.1 Problem Definition 06 
+2.1.2 Requirement Specification 06 
+2.1.3 Hardware software requirements 07 
+2.1.4 Planning & scheduling 08 
+2.1.5 Preliminary product description 08 
+2.1.6 Technology used for development 08 
+2.2 System Analysis 14 
+2.2.1 Study of Current System 14 
+2.2.2 Problem and Weakness of Current System 14 
+2.2.3 Requirement of New System 14 
+2.2.4 Functionality 14 
+2.2.5 Feasibility study 18 
+2.2.6 System development life cycle 21 
+3. System Design 25 
+3.1 Data flow diagrams 27 
+3.2 E-R diagram 39 
+3.3 Data dictionary 41 
+3.4 Organization chart 53 
+3.5 Input/Output Design 55 
+4. Testing and implementation 74 
+4.1 Testing approach 74 
+4.2 Testing strategy 76 
+4.3 Test case 79 
+4.4 Implementation 85 
+ 
+5. Conclusion 87 
+6. Limitation of System 89 
+7. Future scope of the project 91 
+8. Bibliography 93 
+ 
+ 
+ 
+Title Page No. 
+1. Context Level DFD 29 
+2. 1st Level Admin Side DFD 30 
+3. 2nd Level Admin Side DFD (2.0) 31 
+4. 2nd Level Admin Side DFD (3.0) 31 
+5. 2nd Level Admin Side DFD (4.0) 32 
+6. 2nd Level Admin Side DFD (5.0) 32 
+7. 2nd Level Admin Side DFD (6.0) 33 
+8. 2nd Level Admin Side DFD (7.0) 33 
+9. 2nd Level Admin Side DFD (8.0) 34 
+10. 2nd Level Admin Side DFD (9.0) 34 
+11. 1st Level Vendor Side DFD (1.0) 35 
+12. 2nd Level Vendor Side DFD (2.0) 35 
+13. 1st Level User Side DFD 36 
+14. 2nd Level User Side DFD (4.0) 37 
+15. 2nd Level User Side DFD (5.0) 37 
+16. ER Diagram 40 
+17. Organization Chart 53 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Project Title E-commerce 
+Project Definition /Goal Increase sales and profitability of the 
+business. 
+Project Guide  Dr. Maitri Jhaveri 
+Team Size 1 
+Operating System Microsoft Windows 11. 
+Front end used PHP 
+Back end used MYSQL 
+Project Duration 3 months 
+Submitted by Kalathiya Hardik Premjibhai 
+Submitted To Department Of 
+Computer 
+Science ,Gujarat 
+University 
+Ahmedabad-380009. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1. INTRODUCTION 
+E-Commerce Solution is a web-based application, which has more 
+convenient, more flexible and more comprehensive retrieval. 
+The main task for which the application is been developed is to allow any 
+user to perform online shopping of various products. 
+The application allows the users to be a member by filling an online 
+registration form and then he/she can use his/her account for any future task 
+that needs to be carried out in the site. 
+Application also allows a user to making shopping without making any 
+registration to the site. Thus, the application is developed taking care of all 
+type of users and its need. 
+The application provides various features that able to make the customer 
+easy to search products and buy it. 
+Extra functionality is also provided to special registered customer, like they 
+can maintain the records of the products that they want on some later stage, 
+i.e., the application is able to maintain a list of products of interest of all 
+registered customer. 
+Application also records various statistics and allows the administrator for 
+changing any orders status and product & category management. 
+1.1 Background: 
+The “E-commerce” is developed according the current need in 
+different Fields. 
+This is Ecommerce Website which provides facility for purchasing 
+products. So by using this system users which want to purchase some 
+products will first Register an account on this portal then Login through 
+their E-mail and Password, and then Select items which they want to 
+purchase and add them to cart and finally checkout by giving payment 
+details. So, by using this portal users can easily purchase products from 
+there. 
+E commerce is one of the web applications to improve the marketing 
+of the vendor’s products. 
+This web application involves all the features of the online shopping. 
+1.2 Objective: 
+A key objective of E-commerce is that it will consolidate the data into 
+one central location. 
+This will enable easy management of all information and ensure data 
+integrity across the entire breadth of the system. And it also very useful 
+to customers because it saves their time and money 
+Developing a GUI based website, which will cover all the information 
+Related to the all products which is used in our daily life. For example – Mobiles Phones, Laptops, Clothes, beauty products, books and many 
+more. So, by this GUI based website a user wants to purchase 
+something then it only a mouse clicks away to purchase these products. 
+The e-commerce is mainly useful for haven’t time to go shopping or for 
+comfortably to the customers. 
+Those are just entered into this website and bought they want at any 
+time they can visit the web-site. 
+Customer will choose different items like mobile, laptops, etc. This 
+website is based on this formal. After chosen items they pay bill 
+thorough online payment process and cod. 
+The system can print the receipt of the customer’s order. Customer will 
+get their items just sitting at home. 
+1.3 Goal: 
+The primary goal of e-commerce is to reach maximum customers at the 
+right time to increase sales and profitability of the business. 
+Functions of e-commerce include buying and selling products. 
+This Website is developed for on-line shopping. It will be an On-line 
+software system which uses to buy product online. 
+This website replaces the old shopping methodology with the latest 
+technology. It designed to be easy to use, featuring a graphical user 
+interface similar to that found on most web application. 
+1.4 Purpose: 
+The main purpose of Ecommerce website is to create and develop new 
+models, and to optimize the relationships between a different product 
+company and its customers. 
+People can visit your website, choose the products they like, enter the 
+required details, make payment, and purchase products in a jiffy. 
+1.5 Scope: 
+The scope of ecommerce is expanding day by day due to the heavy  
+number of internet users all over the world. 
+People are spending more time in doing online shopping for various 
+products available on the ecommerce platforms. 
+This system will reduce the manual operation required to maintain all 
+the records of shopping information. 
+The impact of e commerce is really good in all the developing 
+countries. India has a huge population and with increase in the internet 
+users, the e- commerce expansion becomes easy. 
+It will provide facility to build and organize profitable business network 
+of interested people. It will allow user to publish his product 
+information for sell as well as the opportunity for the visitors which 
+they can get if they take interest in network marketing. 
+The support of the system contact management can help users to 
+enlarge his business group. Moreover, Auto-responder facility of 
+“E-commerce” will allow user to keep in touch with his prospects. 
+1.6 Applicability: 
+This web-based E-commerce is used for customers to purchase 
+products online. 
+It can easily purchase at home, not required go to the any place or shop. 
+So, it can save time of the users. 
+Be easy to understand by the user and admin. 
+To increase sale of business. 
+Have a good user interface. 
+
+2. SYSTEM REQUIREMENT AND ANALYSIS 
+2.1 Requirement Analysis: 
+Requirement and analysis are the process of defining the expectations 
+of the users for an application that is to be built or modified. 
+It involves all the tasks that are conducted to identify the needs of 
+different stakeholders. 
+Therefore, requirements analysis means to analyse, document, validate 
+and manage software or system requirement. 
+High-quality requirements are documented, actionable, measurable, 
+testable, traceable, helps to identify business opportunities, and are 
+defined to a facilitate system design. 
+2.1.1 Problem Definition 
+This system is used for daily activities such as purchase products 
+maintain customers details and their orders details. 
+It is very difficult to do this process manually. Hence it is 
+recommended to computerize the process by developing the 
+relative software as the world is turning into information and 
+technology; computerization becomes a necessity in all walks of 
+life. 
+When a customer can buy their products using this website, they 
+want to know if their products have been moved to their right 
+location or not. If not then by what time will he be shifted and 
+where is he now. It has to wait. 
+Taking all this information manually is very difficult and time 
+taking process. To handle all these activities, include various 
+processes and paper work from the management also have to be 
+involved. 
+2.1.2 Requirement Specification: 
+A Requirement Specification is a collection of the set of all 
+requirements that are to be imposed on the design and 
+verification of the product. 
+Requirement specification is very critical that enables the 
+success of a system or software project to be assessed. 
+Requirements are generally split into two types: 
+1) Functional Requirement 
+2) Non-functional Requirement 
+ 
+1) Functional Requirement: 
+ 
+ Product Information Management 
+ Order Management 
+ Payment Security 
+ Reporting and Analytics 
+ Shipping Services 
+ Third-Party Integrations 
+ Mobile-Friendly 
+ Integrations 
+ 
+2) Non-Functional Requirement: 
+ 
+ Usability 
+ Security 
+ Performance 
+ 
+2.1.3 Hardware software requirements: 
+ 
+● Software Requirement 
+ 
+ Front End : PHP 
+ Back End : MySQL 
+ Server : Apache server 
+ Browser : Google chrome 
+ Operating System : Windows 7 or above, Linux, Mac 
+ 
+ 
+● Hardware Requirement 
+ 
+Hardware Name  Requirement 
+ SSD Disk   512GB or above 
+ RAM   4GB or above 
+ Processor  Generation 4 or above 
+ 
+2.1.4 Planning & scheduling 
+ACTIVITY 
+Requirement Analysis 
+Designing 
+Coding 
+Testing 
+Documentation 
+TIME DURATION 
+2 Week 
+3 Week 
+4 Week 
+1 Week 
+2 Week 
+2.1.5 Preliminary product description: 
+we analyse information of our project from various resources and 
+found that the system has more scope in real environment. 
+our system applicable for all kinds of user and we design our 
+project as per user's requirements, so all types of users can easily 
+access system. 
+2.1.6 Technology Used for Development 
+● Technology Used 
+PHP 
+MySQL 
+JavaScript 
+Ajax 
+jQuery 
+XAMPP SERVER 
+CSS 
+HTML 
+Bootstrap 
+(1) PHP 
+Precisely, PHP is a very powerful server-side scripting language like 
+ASP for developing dynamic web Applications. 
+Using PHP, you can build interactive and dynamic websites with ease. if 
+you have some idea about the c language then learning PHP should be a 
+fairly simple task for you. 
+It is free; It is suitable for web development, it is efficient, it is widely 
+used and it is considered to be the most powerful alternative to 
+Microsoft’s ASP. 
+PHP script can be embedded straight into the heart of html code just like 
+ASP. 
+One of the reasons of the why PHP is getting more popular is that its 
+syntax is very much similar to that of c and Perl. 
+PHP is compatible with various web servers like Apache and the 
+Microsoft’s IIS as well. 
+All the PHP scripts are executed on the server and it supports various 
+databases like MySQL, oracle, solid, generic ODBC etc.; however, it is 
+mostly used with MySQL. 
+Another reason for the ever-increasing popularly of PHP is that it is free 
+to download and use. 
+Features of PHP: 
+Simple 
+It is very simple and easy to use, compared to another scripting language 
+it is very simple and easy, this is widely used all over the world. 
+Interpreted 
+It is an interpreted language, i.e. there is no need for compilation. 
+Faster 
+It is faster than other scripting languages e.g. asp and jsp. 
+Open Source 
+Open source means you no need to pay for using PHP, you can free 
+download and use. 
+Platform Independent 
+PHP code will be run on every platform, Linux, Unix, Mac OS X, 
+Windows. 
+Case Sensitive 
+PHP is case sensitive scripting language at the time of variable 
+declaration. In PHP, all keywords (e.g. if, else, while, echo, etc.), classes, 
+functions, and user-defined functions are NOT case sensitive. 
+(2) MYSQL 
+The MySQL pluggable storage engine architecture enables. A database 
+professional to select a specialized storage engine for a particular 
+application need while being completely shielded from the need to 
+manage any specific any specific application coding requirements. 
+The MySQL server architecture isolates the application programmer and 
+DBA from all of the low-level implementation details at the storage 
+level, providing a consistent and easy application model and API. 
+He application programmer and DBA interact with the MySQL database 
+through connector API and service layers that are above the storage 
+engines. 
+If application changes bring about requirements that demand the 
+underlying storage engine change, or that one or more storage engines be 
+added to support new needs, no significant coding or process changes are 
+required to make things work. 
+The MySQL server architecture shields the application from the 
+underlying complexity of the storage engine by presenting a consistent 
+and easy-to-use API that applies across storage engines. 
+Features: 
+It was written in C and C++ and has been compiled to run on many 
+different platforms. 
+It incorporates a modular design approach to create a multi-layer 
+server design. 
+It supports multi-threading, making it easily scalable to incorporate 
+multiple CPUs if available. 
+Advantages: 
+Reduced Total Cost of Ownership 
+Portability 
+Seamless Connectivity 
+Rapid Development and Round-the-Clock Uptime 
+Data Security 
+Disadvantages: 
+MySQL lower version (5.0 or less) doesn't support ROLE, 
+COMMIT and stored procedure. 
+MySQL does not support a very large database size as efficiently. 
+MySQL doesn't handle transactions very efficiently and it is prone 
+to data corruption 
+(3) XAMPP Server 
+XAMPP is a free and open-source cross-platform web server solution 
+stack package developed by Apache. 
+XAMPP is regularly updated to the latest releases of Apache, Maria DB, 
+PHP and Perl. 
+It also comes with a number of other modules including OpenSSL, 
+phpMyAdmin, MediaWiki , Joomla, Word Press and more. 
+XAMPP stands for cross-platform(X), Apache (A), MySQL (M), and 
+PHP (P) 
+And Perl (P).it is a simple, lightweight Apache distribution that makes it 
+extremely easy for us to create a local web server for testing. 
+(4) JavaScript 
+JavaScript is a programming language that can be include on web page 
+to make them more interactive. You can use it to check or modify the 
+content of forms, change images, open new windows and write a 
+dynamic page contain. 
+JavaScript is a client side, interpreted, object-oriented, high-level 
+scripting language, while java is client side, compiled, object-oriented 
+high-level language. 
+(5) jQuery 
+j-query is a cross-browser JavaScript library designed to simplify the 
+client- side scripting of 
+HTML. 
+jQuery is free, open-source software, dual-licensed under the MIT 
+license or the GNU general public license, version2. 
+The modular to the j-query library allows the creation of powerful 
+dynamic web pages and web applications. 
+(6) CSS 
+Cascading style sheets (CSS) is a WC3 standard for defining the 
+presentation of web documents. 
+Presentation refers to the way a document is displayed or delivered to the 
+user, whether it’s on a computer monitor, a cell phone display, or read 
+aloud by a screen reader. 
+(7) AJAX 
+The Term Ajax Is Used to Describe a Set of Technologies That Allowed 
+Browsers to Provide User with A More Natural Browser Experience. 
+Ajax Provides the Ability to Communicate with the Server 
+Asynchronously, Thereby Freeing the User Experience from The 
+Request and Response Cycle 
+(8) HTML 
+Html or Hypertext Markup Language Is the Standard Mark Up Language 
+Used to Create Web Pages. 
+Html Is Written in The Form of Html Elements Consisting of Tags 
+Enclosed in Angle Brackets (Like <Html>). Html Tags Most Commonly 
+Come in Pairs Like <H1>And</H1>, Although Some Tags Represent 
+Empty Elements and So Are Unpaired, For Example <Img>. 
+The First Tag in A Pair Is the Start Tag, and the Second Tag Is the End 
+Tag (They Are Also Called Opening Tags and Closing Tags). 
+The Purpose of a Web Browser Is to Read Html Documents and 
+Compose Them into Visible or Audible Web Pages. The Browser Does 
+Not Display the Html Tags, But Uses the Tags to Interpret the Content of 
+the Page. 
+(9) Bootstrap 
+Bootstrap is the most popular HTML, CSS and JavaScript framework 
+for developing a responsive and mobile friendly website. 
+It is absolutely free to download and use. 
+It is a front-end framework used for easier and faster web 
+development. 
+It includes HTML and CSS based design templates for typography, 
+forms, buttons, tables, navigation, modals, image carousels and 
+many others. 
+It can also use JavaScript plug-ins. 
+It facilitates you to create responsive designs. 
+
+2.2 System Analysis 
+2.2.1 Study of Current System: 
+The current system involves great amount of time required to 
+carry out the process, system is totally involving only the 
+physically mode of communication and transport and the most 
+important buying and selling. 
+The customer/user has to be present in order to buy a product or 
+can say as other way, we have to be idle waiting for a customer. 
+In short one can say that the current system is not a system. 
+This is what for the new E-commerce is introduced which has 
+many advantages over the current system‟ problem as stated. 
+2.2.2 Problem and Weakness of Current System: 
+Current system we settled our working place at various place in the 
+city. 
+The customer has to search for the best of their required product 
+and then we have to make a deal. 
+Because of the monopoly in the system, it’s very difficult to make a 
+deal without making cheat the other one. 
+The other main problem with this system is the time required for 
+making out the deal in this system. 
+Hence the customer has to physically present at the shop for the 
+product, which requires lot of time. 
+When this system is been taken in the consideration with the 
+involvement of idea of using the internet for the shopping, the 
+benefits provided by the new system are much higher than using 
+this simple current system. 
+2.2.3 Requirement of New System: 
+The Major Advantage E-Commerce is that people can gain access 
+information at any Time, night or a day. 
+We can directly contact to purchaser, so Money given to middle 
+man is decrees. 
+2.2.4 Functionality: 
+In our system there are three roles. 
+1) Admin 
+2) Vendor 
+3) User 
+ 
+(1) Admin: 
+ 
+1. Login: 
+ Here admin can login for access to admin panel. 
+ 
+2. Dashboard: 
+ Here admin can view and manage total number of products, 
+total number of categories, total number of subcategories, 
+total number of orders, total number of users, vendor. 
+ 
+3. User: 
+ Here admin can manage users and perform action on the users. 
+ 
+4. Category: 
+ Here admin can add/remove/edit all category of product. 
+ 
+5. Subcategory: 
+ Here admin can add/remove/edit all subcategory of product. 
+ 
+6. Product: 
+ Here admin can add/remove/edit all products. 
+ 
+7. Orders: 
+ Here admin can check the order details of customers and 
+perform action on the orders. 
+ 
+8. Vendor: 
+ Here admin can manage vendor add/delete/edit. 
+ 
+9. Banner: 
+ Here admin can add/remove/edit all banner. 
+ 
+10. coupon: 
+ Here admin can add/remove/edit all coupon. 
+ 
+ 
+(2) Vendor: 
+1. Login: 
+ Here vendor is login. 
+ 
+2. Product: 
+vendor can add /remove/edit their own products. 
+3. Orders: 
+Here vendor check their own product the order details of 
+customers/users but not perform action on the orders. 
+(3) User: 
+1. Register: 
+Here user can register for login. 
+2. Login: 
+Here user can login for purchase any product. 
+3. Shopping: 
+Here all users can see our product image and details. After 
+users can order that product and payment. 
+4. Cart: 
+Here all users can store the detail of product. 
+5. Wishlist: 
+Here users manage the Wishlist of product. 
+6. Change Password: 
+Here user can change their old password to new password. 
+7. Edit Profile: 
+Here user can change his profile name and password. 
+
+2.2.5 Feasibility study: 
+FEASIBILITY STUDY is a test of system proposal according 
+to its workability, impact of the organization, ability to meet 
+needs and effective use of the resources. Feasibility is the 
+determination of whether or not a project is worth doing the 
+process followed and making this determination is called 
+feasibility analysis. This determines whether a project can and 
+should be achieved. Once it has been determined that a project 
+is feasible, the analyst can go ahead and prepare the project 
+specification which finalizes project requirements. 
+Generally, feasibility analyses are undertaken within right 
+time constraints and normally conclude in a written and oral 
+feasibility report. The contents and recommendations of such 
+a study will be used as a sound basis for deciding whether to 
+proceed, postpone or cancel the project. 
+Thus, since the feasibility analysis may lead to the 
+commitment of large resources, it becomes necessary that it 
+should be conducted competently and that no fundamental 
+errors of judgment are made. 
+1. Economical Feasibility 
+2. Time Schedule Feasibility 
+3. Technical Feasibility 
+4. Operational Feasibility 
+1. Economical Feasibility: 
+Economic analysis could also be referred to as cost/benefit 
+analysis. It is the most frequently used method for evaluating 
+the effectiveness of a new system. In economic analysis the 
+procedure is to determine the benefits and savings that are 
+expected from a candidate system and compare them with 
+costs. If benefits outweigh costs, then the decision is made to 
+design and implement the system. An entrepreneur must 
+accurately weigh the cost versus benefits before taking an 
+action. 
+2. Time Schedule Feasibility: 
+This involves questions such as how much time is available 
+to build the new system, when it can be built, whether it 
+interferes with normal business operation, etc. It also states 
+that whether the proposed system will be completed in the given time 
+or not. 
+3. Technical Feasibility: 
+A large part of determining resources has to do with 
+assessing technical feasibility. It considers the technical 
+requirements of the proposed project. The technical 
+requirements are then compared to the technical capability of 
+the organization. The systems project is considered 
+technically feasible if the internal technical capability is 
+sufficient to support the project requirements. 
+The analyst must find out whether current technical 
+resources can be upgraded or added to in a manner that 
+fulfils the request under consideration. This is where the 
+expertise of system analysts is beneficial, since using their 
+own experience and their contact with vendors they will be 
+able to answer the question of technical feasibility. 
+4. Operational Feasibility: 
+Measure how much the proposed system solves the existing 
+system problems. This project is surely operationally feasible 
+because the proposed system (the project) is a good solution 
+maker of the problem or specific solution will work in the 
+existing system and create a good environment towards the 
+user of our application. The project can cover the following 
+activities: -The new system will be automatic because it will 
+deal with a database. 
+A complete design of the new project system. 
+Will be interactive and User friendly. 
+Will be easy to navigate and manipulate. 
+The system will come up with updated information and 
+register content. 
+The system is user friendly and suitable especially for the user. 
+
+2.2.6 System Development Life Cycle 
+The system development life cycle (SDLC) is a formal way of ensuring 
+that adequate security controls and requirements are implemented in a 
+new system or application. 
+Integrating technologies and practices into the development of new 
+system and application deployments provides an opportunity to design 
+security into the solution on the front end of the process, rather than 
+retrofitting it after the solution is deployed. 
+❖ Various Phases of Life Cycle: 
+1) Preliminary analysis: 
+To identify the real problem of the system with all necessary 
+user requirements is called preliminary investing of the 
+system. The preliminary investigation of the project or system 
+is help in: 
+Conduct the preliminary analysis: Discover the system or 
+project objectives and the nature and scope of the problem 
+under study. Even if a problem refers only to a small segment 
+of the system itself, find out what the objectives of the system 
+itself are. Then see how the problem being studied fits in with 
+them. 
+Propose alternative solutions: After analyses into the 
+system objectives and specific problems, several solutions 
+may have been discovered. However, alternate proposals may 
+still come from interviewing our system related entity 
+employees, Customer, workers Insight may also be gained by 
+researching what competitors and existing system are doing. 
+Cost benefit analysis: Analyse and describe the costs and 
+benefits of implementing the proposed changes. In the end, 
+the ultimate decision on whether to leave the system as is, 
+improve it, or develop a new system will be guided by this 
+and the rest of the preliminary analysis data. 
+2) Systems analysis, requirements definition: 
+Define project goals into defined functions and operations of 
+the intended application. 
+This involves the process of gathering and interpreting facts, 
+diagnosing problems, and recommending improvements to the 
+system. 
+Project goals will be further aided by analysis of end-user 
+information needs and the removal of any inconsistencies and 
+incompleteness in these requirements. 
+A series of steps followed by the developer include. 
+1) Collection of facts: Obtain end user requirements through 
+documentation, study about system, observation, and 
+questionnaires. 
+2) Analysis of the proposed system: Find solutions to the 
+shortcomings described in step two and prepare the 
+specifications using any specific user proposals. 
+3) System Design: 
+At this step desired features and operations are described in 
+detail, including screen layouts, shop management rules, process 
+schedule and other documentation. 
+Develop detailed design specifications that translate functional 
+specifications into a logical and physical design. 
+Detailed design specifications are developed during the design 
+phase of the SDLC and describe how the system or application is 
+designed to satisfy the requirements documented in the functional 
+specifications. 
+Detailed design specifications should include the following: 
+Database requirements - relationship between data elements. 
+File requirements - description of each file, file access methods, 
+list of fields within a record, data attributes and anticipated 
+number of records. 
+File requirements - description of each file, file access methods, 
+list of fields within a record, data attributes and anticipated 
+number of records. 
+Program requirements - programs used and their purpose, 
+description of formulas and calculations, and interrelationships 
+between programs. 
+Screen designs - fields in each screen, purpose of each field, 
+description of how each screen is triggered, logical flow of 
+screens specifying screens that pull other screens, input checks 
+performed, and description of error messages. 
+Report designs - data contained in each field of each report and a 
+definition of how each data result is derived. 
+Security design - description of access control mechanisms, 
+audit log provisions, user authentication and encryption 
+provisions. 
+4) Development 
+The development phase is where the system or application’s 
+security features are developed, configured and enabled. 
+Use the program specifications to describe the program logic and 
+processing requirements. 
+Program specifications are developed as part of the development 
+phase prior to the commencement of programming. 
+These specifications provide the thought process required to 
+determine the steps to code the programs. 
+5) System Testing 
+The system testing is used experimentally to ensure that the 
+project works is perfectly or completely. 
+Data are input in the system and the result of the system 
+performance is checked for data processing. 
+Testing is performed by analyst, user and persons who are not at 
+all connected with the system that help to the developer to 
+developed well system for real environment. 
+6) Implementation 
+The implementation view of software requirement presents the 
+real-world manifestation of processing functions and information 
+structures. 
+This computerized system is specified in a manner that dictates 
+accommodation of certain implementation details. 
+The implementation environment of the developed system 
+facilitates multiple users to use this system simultaneously. 
+The user interfaces are designed keeping in mind that the users of 
+this system are familiar to using GUI-based systems. 
+Thus, we restricted ourselves to developing a GUI-based system 
+so that it becomes easier for the end user to get acquainted to the 
+developed system. 
+
+
+3. SYSTEM DESIGN 
+System Design is the process of designing the architecture, components, 
+and interfaces for a system so that it meets the end-user requirements. 
+System Design for tech interviews is something that can’t be ignored! 
+Almost every IT giant whether it be Amazon, Google, or any other ask 
+various questions based on System Design concepts such as scalability, 
+load-balancing, caching, etc. in the interview. 
+This specifically designed System Design tutorial will help you to learn 
+and master System Design concepts in the most efficient way from basics 
+to advanced level. 
+There are three phase of system design- 
+1) Architectural design 
+2) Logical design 
+3) Physical design 
+1) Architectural design 
+• To describes the views, models, behaviour, and structure of the 
+system. 
+2) Logical design 
+• To represent the data flow, inputs and outputs of the system. 
+Example: ER Diagrams (Entity Relationship Diagrams). 
+3) Physical design 
+• Defined as a) How users add information to the system and how 
+the system represents information back to the user. b) How the 
+data is modelled and stored within the system. c) How data 
+moves through the system, how data is validated, secured and/or 
+transformed as it flows through and out of the system. 
+
+3.1 Data Flow Diagrams: 
+The DFD takes an input-process-output view of a system i.e. data objects 
+flow into the software, are transformed by processing elements, and 
+resultant data objects flow out of the software. 
+Data objects represented by labelled arrows and transformation are 
+represented by circles also called as bubbles. DFD is presented in a 
+hierarchical fashion i.e. the first data flow model represents the system as 
+a whole. Subsequent DFD refine the context diagram (level 0 DFD), 
+providing increasing details with each subsequent level. 
+The DFD enables the software engineer to develop models of the 
+information domain & functional domain at the same time. As the DFD 
+is refined into greater levels of details, the analyst performs an implicit 
+functional decomposition of the system. At the same time, the DFD 
+refinement results in a corresponding refinement of the data as it moves 
+through the processes that embody the applications. 
+A context-level DFD for the system the primary external entities produce 
+information for use by the system and consume information generated by 
+the system. The labelled arrow represents data objects or object 
+hierarchy. 
+RULES FOR DFD: 
+Fix the scope of the system by means of context diagrams. 
+Organize the DFD so that the main sequence of the actions 
+Reads left to right and top to bottom. 
+Identify all inputs and outputs. 
+Identify and label each process internal to the system with Rounded 
+circles. 
+A process is required for all the data transformation and Transfers. 
+Therefore, never connect a data store to a data Source or the destinations 
+or another data store with just a Data flow arrow. 
+Do not indicate hardware and ignore control information. 
+Make sure the names of the processes accurately convey everything the 
+process is done. 
+There must not be unnamed process. 
+Indicate external sources and destinations of the data, with Squares. 
+Number each occurrence of repeated external entities. 
+Identify all data flows for each process step, except simple Record 
+retrievals. 
+Label data flow on each arrow. 
+Use details flow on each arrow. 
+Use the details flow arrow to indicate data movements. 
+NOTATIONS Symbols used in DFD: 
+(1) Process: People, procedure or devices that use or produce data. The 
+physical component is not defined. 
+(2) External entity: An external entity such as an employee, team leader, 
+and HR person are essentially physical entities external to the software 
+system which interact with the system by inputting data to the system or 
+by consuming the data produced by the system. 
+(3) Data Flow: A data flow symbol represents the data flow occurring 
+between two processes or between, an external entity and a process in the 
+direction of the data flow arrow. 
+(4) Data store: A data store represents a logical file. The direction of data 
+flow arrow shows whether data is being read from or written into a data 
+store. 
+1) Context Level DFD 
+A Context Level Diagram is a top level (also known as level 0) data 
+flow diagram. 
+It only contains one process node (process 0) that generalizes the 
+function of the entire system in relationship to external entities. 
+In context diagram the entire system is treated as a single process and 
+all its inputs, outputs, sinks, and sources are identified and shown. 
+Below data flow diagram of E-Commerce site shows the three users can 
+operate the system Admin, Vendor and Customer user. 
+Figure 1: Context Level DFD 
+1) 1st Level Admin Side DFD 
+● The admin side DFD describe the functionality of Admin, Admin is a owner of the 
+website. Admin can first add category of product and then add subcategory of category 
+and then add product by category and subcategory wise. Admin can manage order, 
+vendor, banner, coupon and users. 
+Figure 2: 1st Level Admin Side DFD 
+2) 2nd Level Admin Side DFD (2.0) 
+Figure 3: 2nd Level Admin Side DFD (2.0) 
+3) 2nd Level Admin Side DFD (3.0) 
+Figure 4: 2nd Level Admin Side DFD (3.0) 
+4) 2nd Level Admin Side DFD (4.0) 
+Figure 5: 2nd Level Admin Side DFD (4.0) 
+5) 2nd Level Admin Side DFD (5.0) 
+Figure 6: 2nd Level Admin Side DFD (5.0) 
+6) 2nd Level Admin Side DFD (6.0) 
+Figure 7: 2nd Level Admin Side DFD (6.0) 
+7) 2nd Level Admin Side DFD (7.0) 
+Figure 8: 2nd Level Admin Side DFD (7.0) 
+ 
+8) 2nd Level Admin Side DFD (8.0) 
+ 
+Figure 9: 2nd Level Admin Side DFD (8.0) 
+ 
+ 
+9) 2nd Level Admin Side DFD (9.0) 
+ 
+Figure 10: 2nd Level Admin Side DFD (9.0) 
+ 
+10) 1st Level Vendor Side DFD 
+Figure 11: 1st Level Vendor Side DFD (1.0) 
+11) 2nd Level Vendor Side DFD (2.0) 
+Figure 12: 2nd Level Vendor Side DFD (2.0) 
+12) 1st Level User Side DFD 
+Figure 13: 1st Level User Side DFD 
+13) 2nd Level User Side DFD (4.0) 
+Figure 14: 2nd Level User Side DFD (4.0) 
+14) 2nd Level User Side DFD (5.0) 
+Figure 15: 2nd Level User Side DFD (5.0) 
+
+3.2 E-R Diagram 
+E-R Diagram stand for Entity Relationship diagram that display the 
+relationship of entity sets stored in database. 
+Entity-relationship diagram (ERD) are essential to modelling anything from 
+simple to complex databases, but the shapes and notations used can be very 
+confusing. The purpose of ER diagram is to represent the entity framework 
+infrastructure. 
+Component of the ER diagram. 
+1. Entities 
+2. Attributes 
+3. Relationships 
+1. Entities: 
+Entities is representing by rectangle symbol. 
+A real-word thing either or non-living that is easily recognizable and no 
+recognizable. 
+It is anything in the enterprise that is to be a physical thing or simply 
+a fact about the enterprise or an event that happen in the real world. 
+2. Attribute: 
+Attribute is representing by ovals shape symbol. 
+It is single-value property of either an entity-type or a relationship-type. 
+Attribute are characteristics of an entity, a many-to-many relationship, 
+or a one-to-one relationship. 
+3. Relationships: 
+Relationship is representing by diamond or rhombus shape symbol. 
+Relationship is nothing but an association among two or more entities. 
+There are four type of relationship a:one-to-one, one-to-many, many-to- 
+one, many-to-many relationship 
+Figure 16: ER Diagram 
+
+ 
+3.3 Data Dictionary 
+A data dictionary is a catalog – a repository – of the elements in the system. 
+The data dictionary consists of different major elements like Data 
+Elements, Data Store [Tables Used], Data Flow, Processes and other 
+External entities used in the system. The data dictionary stores details 
+and description of these elements. 
+Analysts use data dictionary for the following important reasons: 
+ To manage the details in large system. 
+ To communicate a common meaning for all system elements. 
+ To document the features of the system. 
+ To facilitate analysis of the details in order to evaluate the 
+characteristics and determine where system changes should 
+be made. 
+ To locate errors and omissions in the system 
+ 
+Table 1 : admin_user 
+Table Name :- admin_users 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Null Description 
+1 id int 11  No Id 
+2 username varchar 25 User 
+Input 
+No Admin and vendor 
+username 
+3 password varchar 50  No password 
+4 role int 2  No Role 
+5 email varchar 50  No Email address 
+6 mobile varchar 12  No Mobile number 
+7 status int 2  No Status 
+ 
+Total No Of 
+Fields 
+7 
+One Row Size 
+(in bytes) 
+152 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the admin and vendor 
+ 
+ 
+ 
+Table 2 : users 
+ 
+Table Name :- users 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 name varchar 50 User 
+Input 
+No Name of user 
+3 password varchar 50  No password 
+4 email varchar 50  No Email address 
+5 mobile varchar 12  No Mobile number 
+6 added_on datetime   No User added date and time 
+ 
+Total No Of 
+Fields 
+6 
+One Row Size 
+(in bytes) 
+173 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the users 
+ 
+ 
+ 
+Table 3 : categories 
+ 
+Table Name :- categories 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes
+ ) 
+Format Null Description 
+1 id int 11  No Id 
+2 categories varchar 25 User Input No Name of  categories 
+3 status tinyint 4  No Status of  categories 
+ 
+Total No Of 
+Fields 
+3 
+One Row Size 
+(in bytes) 
+40 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the  categories 
+ 
+ 
+Table 4 : sub_categories 
+ 
+Table Name :- sub_categories 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Null Description 
+1 id int 11  No Id 
+2 categories_id int 11 User Input No Id of  categories 
+3 sub_categories varchar 25  No Name of sub  categories 
+4 status tinyint 4  No Status of  sub categories 
+ 
+Total No Of 
+Fields 
+4 
+One Row Size 
+(in bytes) 
+51 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the sub categories 
+ 
+ 
+ 
+Table 5 : product 
+ 
+Table Name :- product 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 categories_id int 11 User 
+Input 
+No Id of  categories 
+3 sub_categories_ 
+id 
+int 11  No Id of sub  categories 
+4 name varchar 500  No Name of product 
+5 mrp float   No Mrp of product 
+6 price float   No Selling price of product 
+7 qty int 11  no quantity of product 
+8 image text   No Image name 
+9 short_desc text   No Short  description of 
+product 
+10 description text   No Short  description of 
+product 
+11 best_seller int 4  No Product display in best 
+seller section 
+12 meta_title varchar 200  No Meta title of product 
+13 meta_desc text   No Meta desc of product 
+14 meta_keyword text   No Meta keyword of product 
+15 added_by int 4  No Added by detail 
+16 status tinyint 4  No Status of product 
+ 
+Total No Of 
+Fields 
+16 
+One Row Size 
+(in bytes) 
+556 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the  product 
+ 
+ 
+ 
+Table 6 : product_images 
+ 
+Table Name :- product_images 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 product_id int 11 User 
+Input 
+No Id of product 
+3 product_images text   No Name of image 
+ 
+Total No Of 
+Fields 
+3 
+One Row Size 
+(in bytes) 
+22 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the product image 
+ 
+ 
+Table 7 : order_status 
+ 
+Table Name :- order_status 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes
+ ) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 name varchar 20 User 
+Input 
+No Name of order status 
+ 
+Total No Of 
+Fields 
+2 
+One Row Size 
+(in bytes) 
+31 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the  order status 
+ 
+ 
+ 
+Table 8 : order 
+ 
+Table Name :- order 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 user_id int 11 User 
+Input 
+No User id 
+3 address varchar 250  No Address 
+4 city varchar 50  No Name of city 
+5 pincode varchar 10  No Pincode 
+6 payment_type varchar 20  No Payment type 
+7 total_price int 11  No Total price 
+8 payment_status varchar 20  No Payment status 
+9 order_status int 11  No Order status 
+10 length float   No Length 
+11 breadth float   No breadth 
+12 height float   No height 
+13 weight float   No weight 
+14 txnid varchar 100   Transaction id 
+15 paymentid varchar 100  No Payment id 
+16 ship_order_id int 11  No Ship order id 
+17 ship_shipment_ 
+id 
+int 11  No Ship shipment id 
+18 coupon_id int 11  No Id of coupon 
+19 coupon_value int 11  No Value of coupon 
+20 coupon_code varchar 50   Name of coupon code 
+21 added_on datetime   No Order added date and time 
+ 
+Total No Of 
+Fields 
+21 
+One Row Size 
+(in bytes) 
+688 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the  order 
+ 
+ 
+ 
+Table 9 : order_detail 
+ 
+Table Name :- order_detail 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 Order_id int 11 User 
+Input 
+No Order id 
+3 Product_id Int 11  No Product id 
+4 Qty Int 11  No Product quantity 
+5 price Float   No Product price 
+ 
+Total No Of 
+Fields 
+5 
+One Row Size 
+(in bytes) 
+44 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the order detail 
+ 
+ 
+ 
+Table 10 : coupon_master 
+ 
+Table Name :- coupon_master 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No id 
+2 coupon_code varchar 20 User 
+Input 
+No Name of coupon code 
+3 coupon_value int 11   Value of coupon 
+4 coupon_type varchar 20   Type of coupon 
+5 cart_min_value int 11   Minimum value of cart 
+6 status tinyint 4   Status of coupon 
+ 
+Total No Of 
+Fields 
+6 
+One Row Size 
+(in bytes) 
+107 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the  coupon 
+ 
+ 
+ 
+Table 11 : banner 
+ 
+Table Name :-banner 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 heading1 varchar 50 User 
+Input 
+No Name of heading1 
+3 heading2 varchar 50  No Name of heading2 
+4 btn_txt varchar 20  No Name of button 
+5 btn_link varchar 100  No Button link 
+6 image Text   No Name of image 
+7 order_no Int 4  No Image order no 
+8 status tinyint 4  No Banner status 
+ 
+Total No Of 
+Fields 
+8 
+One Row Size 
+(in bytes) 
+239 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the banner 
+ 
+ 
+ 
+Table 12 : shiprocket_token 
+ 
+Table Name :- shiprocket_token 
+ 
+Database Name : jasoliya_mart Primary Key :id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Field 
+Size 
+(bytes) 
+Format Nul 
+l 
+Description 
+1 id int 11  No Id 
+2 token varchar 500 User 
+Input 
+No Shiprocket token 
+3 added_on timestamp   No Time of added token 
+ 
+Total No Of 
+Fields 
+3 
+One Row Size 
+(in bytes) 
+511 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the Shiprocket token 
+ 
+Table 13 : wishlist 
+ 
+Table Name :- wishlist 
+ 
+Database Name : jasoliya_mart Primary Key : id  
+ 
+Foreign Key :- Reference :- 
+ 
+Sr. 
+No. 
+Field 
+Name 
+Data 
+Types 
+Fiel
+ d 
+Size 
+(bytes) 
+Format Null Description 
+1 id int 11  No Id 
+2 user_id int 11 User Input No User id 
+3 product_id int 11  No Product id 
+4 added_on datetime   No Date and time of added 
+ 
+Total No Of 
+Fields 
+4 
+One Row Size 
+(in bytes) 
+33 
+No of Records expected Overall Size Of 
+Table 
+: Table Remark: 
+This table contains the information of the wish list. 
+ 
+ 
+
+ 
+3.4 Organization Chart 
+ 
+ 
+ 
+ 
+ 
+Figure 17 : Organization Chart 
+ 
+
+3.5 Input/Output Design 
+1. Home page 
+User Side: 
+This is home screen which displays to anyone who opens the site, also 
+it displays the products. 
+2. Registration Form 
+Registration Form are used to registration into the website. This form 
+contains four field name, email, mobile and create password. 
+3. Login Form 
+Login Form are use to login into the website. This form contains two 
+field email and password. 
+ 
+4. Product Main Category Page 
+ Product can directly be seen by category view as shown in 
+selected category. 
+ 
+ 
+ 
+5. Product Sub Category Page 
+ Product can directly be seen by sub category view as shown in selected sub 
+category. 
+ 
+ 
+ 
+6. Product Detail Page 
+ When user clicks on any item, they can see the detail of product and 
+its image. 
+ 
+ 
+7. User Profile Update 
+By clicking on update Profile can update the Name and password. 
+ 
+ 
+8. Forgot Password 
+When user clicks on forgot password can see this page. 
+9. Product Search Page 
+User can search products by n search by entering your query in the Product 
+Search box. 
+10. User Order Page 
+When user clicks on My Order can see this page. 
+11. User Order Details Page 
+When user clicks on Order Detail can see the all detail of order. 
+12. Wishlist page 
+This is Wishlist page which displays to user Wishlist remove product 
+and add to cart product. 
+13. Cart Page 
+This is cart page which displays to cart remove product, update quantity 
+and place order product. 
+14. Checkout Page 
+This is checkout page in add address and select payment method. 
+15. Payment Page 
+This is Online payment page in add card number, card expiry date and 
+CVV. 
+Admin Side: 
+1. Login Page 
+Login Form are used to Admin/ Vendor login into the website. This 
+form contains two field user name and password. 
+2. Dashboard 
+This is dashboard which displays total orders, total product, total vendor and 
+total customers. 
+3. Manage Product 
+This is product manage page which displays all products detail and 
+manage product. 
+4. Add Product 
+This is adding new product page which is use to add product. 
+5. Add Categories 
+This is adding new categories page which is use to add categories. 
+6. Manage Categories 
+This is categories manage page which displays all categories and 
+manage add/edit/delete categories. 
+7. Add Sub Categories 
+This is adding new sub categories page which is use to add sub categories. 
+8. Manage Sub Categories 
+This is sub categories manage page which displays all sub categories 
+and add/edit/delete sub categories. 
+9. Order Display 
+This is order page which displays all orders and manage order and download 
+invoice. 
+10. Manage Order 
+This is order manage page which displays order detail and manage 
+change order status. 
+11. Add Banner 
+This is adding new banner page which is use to add banner. 
+12. Manage Banner 
+This is banner manage page which displays all banner and 
+add/edit/delete banner. 
+13. Add Vendor 
+This is vendor manage page which displays all vendor and 
+add/edit/delete vendor. 
+14. Manage Vendor 
+This is vendor manage page which displays all vendor and 
+add/edit/delete vendor 
+15. Add Coupon 
+This is adding new coupon page which is use to add coupon. 
+16. Manage Coupon 
+This is coupon manage page which displays all coupon and 
+add/edit/delete coupon. 
+17. User Display 
+This is user manage page which displays all user and delete user. 
+Vendor Side: 
+1. Add Products 
+This is adding new product page which is use to add product. 
+2. Product Manage 
+This is vendor side product manage page which displays all products 
+detail and manage product. 
+3. Order Display 
+This is orders page which displays all orders. 
+
+4. TESTING AND IMPLEMENTATION 
+The testing phase is an important part of software development. It is the 
+computerized system will help in automate process of finding errors and 
+missing operations and also a complete verification to determine 
+whether the objectives are met and the user requirements are satisfied. 
+● Software testing is carried out in three steps: 
+The first includes unit testing, where in each module is tested to provide 
+its correctness, validity and also determine any missing operations and 
+to verify whether the objectives have been met. Errors are noted down 
+and corrected immediately. Unit testing is the important and major part 
+of the project. So, errors are rectified easily in particular module and 
+program clarity is increased. In this project entire system is divided into 
+several modules and is developed individually. So, unit testing is 
+conducted to individual modules. 
+The second step includes Integration testing. It need not be the case, the 
+software whose modules when run individually and showing perfect 
+results, will also show perfect results when run as a whole. The 
+individual modules are clipped under this major module and tested 
+again and verified the results. This is due to poor interfacing, which may 
+result in data being lost across an interface. A module can have 
+inadvertent, adverse effect on any other or on the global data structures, 
+causing serious problems. 
+The final step involves validation and testing which determines which 
+the software functions as the user expected. Here also some 
+modifications were. In the completion of the project, it is satisfied fully 
+by the end user. 
+4.1 Testing approach: 
+Testing is a process of executing a program with the intent of finding 
+an error. 
+A good test case is one that has a probability of finding an as yet 
+undiscovered error. 
+A successful test is one that uncovers an undiscovered error. 
+To accomplish this objective two different categories of test case 
+design techniques are used. They are: 
+1) White-box testing: 
+White box testing is focus on the program control structure. Test cases 
+are derived to ensure that all statements in the program have been 
+executed at least once during testing and that all logical conditions 
+have been executed. 
+2) Black-box testing: 
+Black box testing is designed to validate functional requirements 
+without regard to the internal workings of a program. Black box 
+testing mainly focuses on the information domain of the software, 
+deriving test cases by partitioning input and output in a manner 
+that provides through test coverage. Incorrect and missing 
+functions, interface errors, errors in data structures, error in 
+functional logic are the errors falling in this category. 
+We have tested our functions of component to check the 
+specification of our components. We selected input set to test the 
+components like in query process we gave the different kinds of 
+inputs to examine their output. We test system with sequences 
+that have only a single value. 
+3) Gray-Box Testing: 
+Grey Box Testing or Gray box testing is a software testing 
+technique to test a software product or application with partial 
+knowledge of internal structure of the application. The purpose 
+of grey box testing is to search and identify the defects due to 
+improper code structure or improper use of applications. 
+4.2 Testing Strategy 
+There are types of testing that we implement. They are as follows: 
+While deciding on the focus of testing activities, study project priorities. 
+For example, for an on-line system, pay more attention to response time. 
+Spend more time on the features used frequently. 
+Decide on the effort required for testing based on the usage of the system. 
+If the system is to be used by a large number of users, evaluate the impact 
+on users due to a system failure before deciding on the effort. 
+A necessary part of the test case is a definition of the expected result. 
+Write test cases for invalid and unexpected as well as valid and expected 
+input conditions. 
+Types of Testing: 
+1. Code testing 
+2. Unit testing 
+3. Integration testing 
+4. Validation testing 
+5. System testing 
+6. Output testing 
+7. User acceptance testing 
+1. Code testing: 
+This was done side by side with coding thus examines the logic of the 
+program. Every path of the program was tested. 
+2. Unit testing: 
+To locate errors focus is given on the modules, independent of the other 
+modules. This is known as unit testing. This enables us to detect errors and 
+correct it without affecting any other modules. Thus, all the modules are 
+individually tested from bottom up starting with the smallest level modules 
+and proceeding one at a time. 
+The objective of Unit Testing is to test a unit of code (program or set of 
+programs) using the Unit Test. 
+Specifications, after coding is completed. Since the testing will depend on the 
+completeness and correctness of test specifications, it is important to subject these 
+to quality and verification reviews. 
+3. Integration testing: 
+Once the unit testing are through then the unit is integrated with the package 
+and tested for its correctness and behaviours. 
+A comprehensive integrated testing includes integrated test plans in the design 
+phase of system development as guide to ensure that the module functions 
+properly with the test data. 
+Different components interact with each other for their functional dependency, 
+while communicating with each other integration test verifies the 
+communication paths between the components and detect the interface 
+defects. 
+4. Validation testing: 
+At the conclusion of the integrated testing, software is completely assembled 
+as a package; interfacing errors have been uncovered and correlated. Then as 
+find series of software test: validation tests are carried out. 
+Validation testing succeeds when the software functions is a manner 
+reasonably or expected by the user. 
+5. System testing: 
+System testing is a series of different tests that verify all system elements have 
+been properly integrated and performed allocated functions. 
+Security test was conducted to verify that protection mechanism built into the 
+system protects it from improper penetration. 
+System Testing is usually carried out by a team that is independent of the 
+development team in order to measure the quality of the system unbiased. It 
+includes both functional and Non-Functional testing. 
+System Testing is usually carried out by a team that is independent of the 
+development team in order to measure the quality of the system unbiased. It 
+includes both functional and Non-Functional testing. 
+6. Output testing: 
+After performing the validation testing the next step is output testing of the 
+proposed system since no system could be useful if it does not produce the 
+output, is the required format. 
+Comparing the output with the format required by the user is output testing. 
+7. User acceptance testing: 
+User acceptance of a system is the key factor for the success of any system. 
+The system under consideration was tested for user acceptance by constantly 
+keeping the touch with the users of the organization necessary changes were 
+made. 
+User acceptance testing, also called application testing or end-user testing, is a 
+phase of software development in which the software is tested in the real 
+world by its intended audience. 
+User acceptance testing validates the testing done at the end of the 
+development cycle. It is typically completed after unit testing, quality 
+assurance, system testing and integration testing. 
+User acceptance testing validates the testing done at the end of the 
+development cycle. 
+It is typically completed after unit testing, quality assurance, system testing 
+and integration testing. 
+4.3 Test Case: 
+A test case is a document, which has a set of test data, preconditions, 
+expected results and post conditions, developed for a particular test scenario 
+in order to verify compliance against a specific requirement. 
+Test Case acts as the starting point for the test execution, and after applying a 
+set of input values, the application has a definitive outcome and leaves the 
+system at some end point or also known as execution post condition. 
+Typical Test Case Parameters: 
+1. Test Case ID 
+2. Test Title 
+3. Test Case Description 
+4. Test Steps 
+5. Input test Data 
+6. Input data 
+7. Actual result 
+8. Expected result 
+Test case is an indispensable component of the software testing life that step 
+validate the application under test. 
+ 
+Test Case For User Login 
+ 
+Project Name: E-commerce 
+Test Case 
+Test Case ID: 1 
+Module Name: login 
+Test Title: Test the login in E-commerce 
+Description: verify login with valid Email and password 
+ 
+ 
+ 
+Step Test Steps Test Data xpected Result ctual Result Status 
+(Pass/Fail
+ ) 
+1 avigate to 
+login page 
+ ser should be able to 
+login 
+ser should is able 
+to login 
+Pass 
+2 ovide valid 
+Email 
+ull edential can be 
+entered 
+ot expected Fail 
+3 ovide valid 
+email 
+c@gmail.com edential can be 
+entered 
+s expected pass 
+4 ovide valid 
+password 
+ssword = Abc1234 edential can be 
+entered 
+s expected Pass 
+5 ick on login 
+button 
+ ser logged ser logged 
+successfully 
+Pass 
+ 
+ 
+ 
+Test Case For User Registration 
+ 
+Project Name: E-commerce 
+Test Case 
+Test Case ID: 2 
+Module Name: Registration 
+Test Title: Test the registration in E-commerce 
+Description: verify registration with valid details 
+ 
+Step Test Steps Test Data Expected Result Actual Result Status 
+(Pass/Fail
+ ) 
+1 Provide valid 
+name 
+User =abc xyz Credential can be 
+entered 
+As expected Pass 
+2 Provide valid 
+email id 
+Email = 
+abc@gmail.com 
+Credential can be 
+entered 
+As expected Pass 
+3 Click On Send 
+OTP Button 
+OTP=1356 Credential can be 
+entered 
+As expected Pass 
+4 Provide valid 
+Mobile Number 
+Mobile 
+NO=9428784512 
+Credential can be 
+entered 
+As expected Pass 
+5 Click On Send 
+OTP Button 
+OTP=5256 Credential can be 
+entered 
+As expected Pass 
+6 Provide valid 
+password 
+Password = 1234 Credential can be 
+entered 
+As expected Pass 
+7 Click on 
+register button 
+ User register User register 
+successfully 
+Pass 
+ 
+ 
+ 
+Test Case For Payment 
+ 
+Project Name: E-commerce 
+Test Case 
+Test Case ID: 3 
+Module Name: payment screen 
+Test Title: Test the payment 
+Description: verify payment Details 
+ 
+Step Test Steps Test Data Expected Result Actual Result Status 
+(Pass/Fail
+ ) 
+1 Provide valid 
+Debit Card 
+Number 
+4242 4242 
+42424242 
+Credential can 
+be entered 
+As expected Pass 
+2 Provide Select 
+valid 
+Exp. Month 
+Month=01 Credential can 
+be entered 
+As expected Pass 
+3 Provide Select 
+valid 
+Exp . Year 
+Year=2025 Credential can 
+be entered 
+As expected Pass 
+4 Provide valid 
+Debit Card 
+CVV 
+CVV=111 Credential can 
+be entered 
+As expected Pass 
+5 Click on PAY 
+NOW button 
+ Paid Payment PAYMENT 
+ARE 
+SUCCSESFU 
+LLY 
+Pass 
+ 
+ 
+ 
+Test Case For Change Password 
+ 
+Project Name: E-commerce 
+Test Case 
+Test Case ID: 4 
+Module Name: Change Password screen 
+Test Title: Test the Change Password in E-commerce 
+Description: verify Current password 
+ 
+Step Test Steps Test Data Expected Result Actual Result Status 
+(Pass/Fail) 
+1 Navigate to 
+Profile page 
+ User should be 
+able to Change 
+Password 
+User should is 
+able to Change 
+Password 
+Pass 
+2 Provide valid 
+Password 
+Null Credential can be 
+entered 
+Not expected Fail 
+3 Provide valid 
+Current 
+password 
+Password = 
+Abc1234 
+Credential can be 
+entered 
+As expected Pass 
+4 Provide new 
+And Confirm 
+password 
+Password = 
+Abc9988 
+Credential can be 
+entered 
+As expected Pass 
+5 Differen
+ t new 
+And 
+Confirm 
+password 
+Password = 
+9988 
+Password = 
+9977 
+Credential can be 
+entered 
+Not expected Fail 
+6 Same new 
+And Confirm 
+password 
+Password = 
+9988 
+Password = 
+9988 
+Credential can be 
+entered 
+As expected Pass 
+7 Click on 
+Update 
+button 
+ Password Updated Password 
+Update 
+successfully 
+Pass 
+ 
+ 
+ 
+Test Case For Admin / Vendor Login 
+ 
+Project Name: E-commerce 
+Test Case 
+Test Case ID: 5 
+Module Name: login screen admin/vendor 
+Test Title: Test the Admin / vendor login in E-commerce 
+Description: verify login with valid Username and password 
+ 
+Step Test Steps Test Data Expected Result Actual Result Status 
+(Pass/Fail) 
+1 Navigate 
+to login 
+page 
+ Admin/ Vendor 
+should be able to 
+login 
+Admin/Vendor 
+should is able 
+to login 
+Pass 
+2 Provide valid 
+Username 
+Null Credential can be 
+entered 
+Not expected Fail 
+3 Provide valid 
+Username 
+JasoliyaMartAdmin Credential can be 
+entered 
+As expected pass 
+5 Provide valid 
+password 
+Jasoliyamart9428 Credential can be 
+entered 
+As expected Pass 
+6 Click on 
+button 
+ Admin/Vendor 
+logged 
+Admin/vendor 
+logged 
+successfully 
+Pass 
+ 
+ 
+4.4 Implementation: 
+Implementation is the stage where the theoretical design is returned 
+into a working system. The most crucial stage is achieving a new 
+successful system and in giving confidence on the new system for the 
+users that it will work efficiently and effectively. 
+The system can be implemented only after thorough testing is done 
+and if it is found to work according to the specification. 
+It involves careful planning, investigation of the current system and its 
+constraints on implementation, design of methods to achieve the 
+changeover and an evaluation of change over methods a part from 
+planning. Two major tasks of preparing the implementation are 
+education and training of the users and testing of the system. 
+The more complex the system being implemented, the more involve 
+will be the systems analysis and design effort required just for 
+implementation. 
+The implementation phase comprises of several activities. The 
+required hardware and software acquisition is carried out. The system 
+may require some software to be developed. For this, programs are 
+written and tested. The user then changes over to his new fully tested 
+system and the old system is discontinued. 
+
+5.CONCLUSION 
+The project was started as our learning experience which really helped 
+us as to how deal with real world solution. This was new but 
+wonderful experience of professional environment and many of the 
+tools used, but we thought -They know enough who know how to 
+learn. 
+While doing project, we learned many things and experienced the 
+field of information technology. Doing small projects is different 
+things, but we gained the actual knowledge of system analysis, 
+design, coding and testing. The development of Employee 
+Management System and information system also had to be user 
+friendly. 
+We also gained the experience of solving the error. Intelligence is not 
+to make any mistakes, but quickly to see how to solve them quickly. 
+The system will replace the manual system, so it will be more 
+efficient. Reliable and quick. We developed the system to satisfy as 
+much requirements that are specified by the organization. 
+
+6.LIMITATION OF SYSTEM 
+Any system will never complete, always there is chance of 
+improving it. It is because of many reasons for example, due to lack 
+of technology or current requirement of user is limited and much 
+more. 
+As the current environment there is always need for the new 
+demands or requirement emerge. So that is why the system which is 
+today looking complete, in future may incomplete need to expand 
+features and technology. 
+The limitation of our system is defined and the lack of functionality 
+in our system as below: 
+1. All Works have manually. 
+2. Speed of the program depends on the computer processor and 
+RAM. 
+3. This application does not have a built-in check out process. 
+An external checkout package has to be integrated in to this 
+application. 
+4. E-commerce websites rely heavily on technology, which can 
+be a limitation if there are technical issues or if the website 
+goes down. This can lead to lost sales and damage to the 
+business's reputation. 
+5. At present our software does not Provide On-line Biding. 
+
+7. FUTURE SCOPE OF THE PROJECT 
+At present our software does not Provide On-line Biding. And also, it 
+doesn’t provide C2C E-commerce model. So, this limitation became 
+use to enhance project in future. 
+The project made he re is just to ensure that this product could be 
+valid in today real challenging world. here all the facilities are made 
+and tested. So, this limitation became use to enhance project in future. 
+add product attributes in this web application like color, size etc. 
+Virtual Reality technologies can provide an immersive shopping 
+experience for customers, allowing them to virtually try on clothing, 
+see furniture in their homes, and more developing in future. 
+Provide more security to its users. 
+The website being easier to use and user friendly. 
+
+8. BIBLIOGRAPHY 
+https://www.w3schools.com 
+https://www.youtube.com 
+https://www.tutorialspoints.com 
